@@ -1,0 +1,4074 @@
+coreboot-4.17-574-gbb53f3091c-dirty Tue Jul 12 22:41:33 UTC 2022 postcar starting (log level: 7)...
+FMAP: area COREBOOT found @ 3300800 (13629440 bytes)
+CBFS: Found 'fallback/ramstage' @0x9740 size 0x15f71 in mcache @0x737de0dc
+Loading module at 0x732f5000 with entry 0x732f5000. filesize: 0x2caf0 memsize: 0x4d8530
+Processing 3222 relocs. Offset value of 0x6f2f5000
+BS: postcar times (exec / console): total (unknown) / 32 ms
+
+
+coreboot-4.17-574-gbb53f3091c-dirty Tue Jul 12 22:41:33 UTC 2022 ramstage starting (log level: 7)...
+coreboot: calling fsp_silicon_init
+FMAP: area COREBOOT found @ 3300800 (13629440 bytes)
+CBFS: Found 'fsps.bin' @0x242800 size 0x40000 in mcache @0x737de204
+FSPS returned 0
++---------------------------------------------------+
+|------ FSP Performance Timestamp Table Dump -------|
++---------------------------------------------------+
+| Perf-ID	Timestamp(ms)		String/GUID |
++---------------------------------------------------+
+    0	         2521528		                     SEC/
+   50	         2522128		                     PEI/
+   40	         2522128		                  PreMem/
+    1	         2529998		                    PEIM/
+    2	         2533185		                    PEIM/
+    1	         2533819		                    PEIM/
+    2	         2534120		                    PEIM/
+    1	         2534787		                    PEIM/
+    2	         2535186		                    PEIM/
+    1	         2535686		                    PEIM/
+    2	         2536549		                    PEIM/
+    1	         2537215		                    PEIM/
+    2	         2537845		                    PEIM/
+    1	         2538246		                    PEIM/
+    2	         2539376		                    PEIM/
+    1	         2539777		                    PEIM/
+    2	         2540576		                    PEIM/
+    1	         2541079		                    PEIM/
+    2	         2543238		                    PEIM/
+    1	         2543607		                    PEIM/
+    2	         2544338		                    PEIM/
+    1	         2544738		                    PEIM/
+    2	         2546133		                    PEIM/
+    1	         2546402		                    PEIM/
+    2	         2547830		                    PEIM/
+    1	         2548098		                    PEIM/
+    2	         2559684		                    PEIM/
+    1	         2559986		                    PEIM/
+    2	         2567061		                    PEIM/
+    1	         2567395		                    PEIM/
+    2	         2570483		                    PEIM/
+    1	         2571082		                    PEIM/
+   40	         2574572		 Silicon Init Before PPI/
+ 50e0	         2586043		            unknown name/
+   40	         2573605		     PCH init pre-memory/
+   41	         2585876		     PCH init pre-memory/
+ 50e1	         2587356		            unknown name/
+   41	         2587492		 Silicon Init Before PPI/
+    2	         2586584		                    PEIM/
+    1	         2586886		                    PEIM/
+   40	         2604784		     UpiInstallPolicyPpi/
+   41	         2594847		     UpiInstallPolicyPpi/
+   40	         2596336		   InstallRasRcPolicyPpi/
+   41	         2596316		   InstallRasRcPolicyPpi/
+   40	         2596966		  InstallMemoryPolicyPpi/
+   41	         2598687		  InstallMemoryPolicyPpi/
+    2	         2598511		                    PEIM/
+   40	         2599943		  Silicon Init After PPI/
+   40	         2604097		 PeiGetCurrentClockingMo/
+   41	         2602250		 PeiGetCurrentClockingMo/
+   40	         2607083		 PeiGetCurrentClockingMo/
+   41	         2606038		 PeiGetCurrentClockingMo/
+   40	         2610778		 PeiGetCurrentClockingMo/
+   41	         2610735		 PeiGetCurrentClockingMo/
+   41	         2627531		  Silicon Init After PPI/
+    1	         2613252		                    PEIM/
+    2	         2617846		                    PEIM/
+    1	         2618181		                    PEIM/
+   40	         2810382		       Full MRC Duration/
+   40	         4019396		  Parallel Mode Dispatch/
+   41	         4019464		  Parallel Mode Dispatch/
+   40	         4019667		  Pipe Sync AP Boot Mode/
+   41	         4021065		  Pipe Sync AP Boot Mode/
+   40	         4021601		        Select Boot Mode/
+   41	         4021601		        Select Boot Mode/
+   40	         4021705		 Pipe Sync SBSP Boot Mod/
+   41	         4021741		 Pipe Sync SBSP Boot Mod/
+   40	         4021911		    Init Structures Late/
+   41	         4022212		    Init Structures Late/
+   40	         4022747		 Initialize Throttling E/
+   41	         4023392		 Initialize Throttling E/
+   40	         4023749		 Detect DIMM Configurati/
+   41	         4418100		 Detect DIMM Configurati/
+   40	         4418303		       Pipe Sync AP Data/
+   41	         4418306		       Pipe Sync AP Data/
+   40	         4418376		 Check POR Compatibility/
+   41	         4421452		 Check POR Compatibility/
+   40	         4421887		   Initialize DDR Clocks/
+   41	         4423754		   Initialize DDR Clocks/
+   40	         4423760		   Pipe Sync SBSP Status/
+   41	         4423796		   Pipe Sync SBSP Status/
+   40	         4423835		               Check XMP/
+   41	         4424919		               Check XMP/
+   40	         4425022		                 Set Vdd/
+   41	         4426125		                 Set Vdd/
+   40	         4426161		        Check DIMM Ranks/
+   41	         4428091		        Check DIMM Ranks/
+   40	         4428097		     Pipe Sync SBSP Data/
+   41	         4428133		     Pipe Sync SBSP Data/
+   40	         4428269		       Initialize Memory/
+   41	         4428271		       Initialize Memory/
+   40	         4428541		         Gather SPD Data/
+   41	         4438603		         Gather SPD Data/
+   40	         4438608		 Prep NVDIMM for Trainin/
+   41	         4438909		 Prep NVDIMM for Trainin/
+   40	         4439444		     Early Configuration/
+   41	         4453096		     Early Configuration/
+   40	         4453565		 DDRIO Initialization (M/
+   41	         4459521		 DDRIO Initialization (M/
+   40	         4459526		 DDRIO Initialization La/
+   41	         4513606		 DDRIO Initialization La/
+   40	         4514008		            DDR Training/
+   40	         4514546		 Pre-Training Initializa/
+   41	         4518505		 Pre-Training Initializa/
+   40	         4518941		  Early CTL/CLK Training/
+   41	         4535428		  Early CTL/CLK Training/
+   40	         4535898		  Early CMD/CLK Training/
+   41	         4731561		  Early CMD/CLK Training/
+   40	         4732064		       RCD QxCA Training/
+   41	         5198792		       RCD QxCA Training/
+   40	         5198798		 Lrdimm Backside Phase T/
+   41	         5198832		 Lrdimm Backside Phase T/
+   40	         5198969		 Lrdimm Backside Cycle T/
+   41	         5198970		 Lrdimm Backside Cycle T/
+   40	         5199074		 Lrdimm Backside Delay T/
+   41	         5199108		 Lrdimm Backside Delay T/
+   40	         5199312		          Receive Enable/
+   41	         5218458		          Receive Enable/
+   40	         5218658		 Rx Dq/Dqs Basic Per Bit/
+   41	         5229032		 Rx Dq/Dqs Basic Per Bit/
+   40	         5229037		    Dq Swizzle Discovery/
+   41	         5229804		    Dq Swizzle Discovery/
+   40	         5230273		 Lrdimm Backside Fine WL/
+   41	         5230706		 Lrdimm Backside Fine WL/
+   40	         5230910		 Lrdimm Backside Coarse /
+   41	         5230944		 Lrdimm Backside Coarse /
+   40	         5230949		 Lrdimm Backside Delay T/
+IOAPIC: Initializing IOAPIC at 0xfec00000
+IOAPIC: ID = 0x02
+IOAPIC: 120 interrupts
+IOAPIC: Clearing IOAPIC at 0xfec00000
+IOAPIC: Bootstrap Processor Local APIC = 0x00
+BS: BS_DEV_INIT_CHIPS run times (exec / console): 953 / 613 ms
+Enumerating buses...
+Root Device scanning...
+CPU_CLUSTER: 0 enabled
+DOMAIN: 0000 enabled
+DOMAIN: 0000 scanning...
+PCI: 00:00.0 [8086/2020] enabled
+PCI: 00:04.0 [8086/2021] enabled
+PCI: 00:04.1 [8086/2021] enabled
+PCI: 00:04.2 [8086/2021] enabled
+PCI: 00:04.3 [8086/2021] enabled
+PCI: 00:04.4 [8086/2021] enabled
+PCI: 00:04.5 [8086/2021] enabled
+PCI: 00:04.6 [8086/2021] enabled
+PCI: 00:04.7 [8086/2021] enabled
+PCI: 00:05.0 [8086/2024] enabled
+PCI: 00:05.2 [8086/2025] enabled
+PCI: Static device PCI: 00:05.4 not found, disabling it.
+PCI: 00:08.0 [8086/2014] enabled
+PCI: 00:08.1 [8086/2015] enabled
+PCI: 00:08.2 [8086/2016] enabled
+PCI: 00:11.0 [8086/a1ec] enabled
+PCI: Static device PCI: 00:11.1 not found, disabling it.
+PCI: 00:11.5 [8086/a1d2] enabled
+PCI: 00:14.0 [8086/a1af] enabled
+PCI: 00:16.0 [8086/a1ba] enabled
+PCI: Static device PCI: 00:16.1 not found, disabling it.
+PCI: 00:16.4 [8086/a1be] enabled
+PCI: 00:17.0 [8086/a182] enabled
+PCI: 00:1c.0 subordinate bus PCI Express
+PCI: 00:1c.0 [8086/a190] enabled
+PCI: 00:1c.4 subordinate bus PCI Express
+PCI: 00:1c.4 [8086/a194] enabled
+PCI: 00:1f.1 [8086/a1a0] enabled
+PCI: 00:1f.2 [8086/a1a1] enabled
+PCI: 00:1f.4 [8086/a1a3] enabled
+PCI: 00:1f.5 [8086/a1a4] enabled
+PCI: 00:1f.0 [8086/a1cb] enabled
+PCI: 00:14.0 scanning...
+scan_bus: bus PCI: 00:14.0 finished in 0 msecs
+PCI: 00:1c.0 scanning...
+PCI: pci_scan_bus for bus 01
+PCI: 01:00.0 subordinate PCI
+PCI: 01:00.0 [1a03/1150] enabled
+PCI: 01:00.0 scanning...
+PCI: pci_scan_bus for bus 02
+PCI: 02:00.0 [1a03/2000] enabled
+PCI: 02:01.0 [1a03/2402] enabled
+scan_bus: bus PCI: 01:00.0 finished in 8 msecs
+Enabling Common Clock Configuration
+PCIE CLK PM is not supported by endpoint
+ASPM: Enabled None
+PCIe: Max_Payload_Size adjusted to 128
+PCI: 01:00.0: No LTR support
+scan_bus: bus PCI: 00:1c.0 finished in 37 msecs
+PCI: 00:1c.4 scanning...
+PCI: pci_scan_bus for bus 03
+scan_bus: bus PCI: 00:1c.4 finished in 2 msecs
+PCI: 00:1f.2 scanning...
+scan_bus: bus PCI: 00:1f.2 finished in 0 msecs
+PCI: 00:1f.4 scanning...
+scan_bus: bus PCI: 00:1f.4 finished in 0 msecs
+PCI: 00:1f.5 scanning...
+scan_bus: bus PCI: 00:1f.5 finished in 0 msecs
+PCI: 00:1f.0 scanning...
+PNP: 002e.0 enabled
+PNP: 002e.0 scanning...
+PNP: 002e.2 enabled
+PNP: 002e.3 enabled
+PNP: 002e.4 enabled
+PNP: 002e.5 enabled
+PNP: 002e.7 enabled
+PNP: 002e.d enabled
+PNP: 002e.e enabled
+scan_bus: bus PNP: 002e.0 finished in 12 msecs
+scan_bus: bus PCI: 00:1f.0 finished in 21 msecs
+PCI: pci_scan_bus for bus 15
+PCI: 15:00.0 subordinate bus PCI Express
+PCI: 15:00.0 [8086/2030] enabled
+PCI: 15:01.0 subordinate bus PCI Express
+PCI: 15:01.0 [8086/2031] enabled
+PCI: 15:02.0 subordinate bus PCI Express
+PCI: 15:02.0 [8086/2032] enabled
+PCI: 15:03.0 subordinate bus PCI Express
+PCI: 15:03.0 [8086/2033] enabled
+PCI: 15:05.0 [8086/2034] enabled
+PCI: 15:05.2 [8086/2035] enabled
+PCI: 15:05.6 [8086/2037] enabled
+PCI: 15:07.0 [8086/2038] enabled
+PCI: 15:07.1 [8086/2039] enabled
+PCI: 15:07.2 [8086/203a] enabled
+PCI: 15:07.3 [8086/203b] enabled
+PCI: 15:07.4 [8086/203c] enabled
+PCI: 15:07.7 [8086/203d] enabled
+PCI: 15:08.0 [8086/208d] enabled
+PCI: 15:08.1 [8086/208d] enabled
+PCI: 15:08.2 [8086/208d] enabled
+PCI: 15:08.3 [8086/208d] enabled
+PCI: 15:08.4 [8086/208d] enabled
+PCI: 15:08.5 [8086/208d] enabled
+PCI: 15:08.6 [8086/208d] enabled
+PCI: 15:08.7 [8086/208d] enabled
+PCI: 15:09.0 [8086/208d] enabled
+PCI: 15:09.1 [8086/208d] enabled
+PCI: 15:09.2 [8086/208d] enabled
+PCI: 15:09.3 [8086/208d] enabled
+PCI: 15:09.4 [8086/208d] enabled
+PCI: 15:09.5 [8086/208d] enabled
+PCI: 15:09.6 [8086/208d] enabled
+PCI: 15:09.7 [8086/208d] enabled
+PCI: 15:0a.0 [8086/208d] enabled
+PCI: 15:0a.1 [8086/208d] enabled
+PCI: 15:0a.2 [8086/208d] enabled
+PCI: 15:0a.3 [8086/208d] enabled
+PCI: 15:0a.4 [8086/208d] enabled
+PCI: 15:0a.5 [8086/208d] enabled
+PCI: 15:0a.6 [8086/208d] enabled
+PCI: 15:0a.7 [8086/208d] enabled
+PCI: 15:0b.0 [8086/208d] enabled
+PCI: 15:0b.1 [8086/208d] enabled
+PCI: 15:0b.2 [8086/208d] enabled
+PCI: 15:0b.3 [8086/208d] enabled
+PCI: 15:0e.0 [8086/208e] enabled
+PCI: 15:0e.1 [8086/208e] enabled
+PCI: 15:0e.2 [8086/208e] enabled
+PCI: 15:0e.3 [8086/208e] enabled
+PCI: 15:0e.4 [8086/208e] enabled
+PCI: 15:0e.5 [8086/208e] enabled
+PCI: 15:0e.6 [8086/208e] enabled
+PCI: 15:0e.7 [8086/208e] enabled
+PCI: 15:0f.0 [8086/208e] enabled
+PCI: 15:0f.1 [8086/208e] enabled
+PCI: 15:0f.2 [8086/208e] enabled
+PCI: 15:0f.3 [8086/208e] enabled
+PCI: 15:0f.4 [8086/208e] enabled
+PCI: 15:0f.5 [8086/208e] enabled
+PCI: 15:0f.6 [8086/208e] enabled
+PCI: 15:0f.7 [8086/208e] enabled
+PCI: 15:10.0 [8086/208e] enabled
+PCI: 15:10.1 [8086/208e] enabled
+PCI: 15:10.2 [8086/208e] enabled
+PCI: 15:10.3 [8086/208e] enabled
+PCI: 15:10.4 [8086/208e] enabled
+PCI: 15:10.5 [8086/208e] enabled
+PCI: 15:10.6 [8086/208e] enabled
+PCI: 15:10.7 [8086/208e] enabled
+PCI: 15:11.0 [8086/208e] enabled
+PCI: 15:11.1 [8086/208e] enabled
+PCI: 15:11.2 [8086/208e] enabled
+PCI: 15:11.3 [8086/208e] enabled
+PCI: 15:14.0 [8086/208f] enabled
+PCI: 15:14.1 [8086/208f] enabled
+PCI: 15:14.2 [8086/208f] enabled
+PCI: 15:14.3 [8086/208f] enabled
+PCI: 15:14.4 [8086/208f] enabled
+PCI: 15:14.5 [8086/208f] enabled
+PCI: 15:14.6 [8086/208f] enabled
+PCI: 15:14.7 [8086/208f] enabled
+PCI: 15:15.0 [8086/208f] enabled
+PCI: 15:15.1 [8086/208f] enabled
+PCI: 15:15.2 [8086/208f] enabled
+PCI: 15:15.3 [8086/208f] enabled
+PCI: 15:15.4 [8086/208f] enabled
+PCI: 15:15.5 [8086/208f] enabled
+PCI: 15:15.6 [8086/208f] enabled
+PCI: 15:15.7 [8086/208f] enabled
+PCI: 15:16.0 [8086/208f] enabled
+PCI: 15:16.1 [8086/208f] enabled
+PCI: 15:16.2 [8086/208f] enabled
+PCI: 15:16.3 [8086/208f] enabled
+PCI: 15:16.4 [8086/208f] enabled
+PCI: 15:16.5 [8086/208f] enabled
+PCI: 15:16.6 [8086/208f] enabled
+PCI: 15:16.7 [8086/208f] enabled
+PCI: 15:17.0 [8086/208f] enabled
+PCI: 15:17.1 [8086/208f] enabled
+PCI: 15:17.2 [8086/208f] enabled
+PCI: 15:17.3 [8086/208f] enabled
+PCI: 15:1d.0 [8086/2054] enabled
+PCI: 15:1d.1 [8086/2055] enabled
+PCI: 15:1d.2 [8086/2056] enabled
+PCI: 15:1d.3 [8086/2057] enabled
+PCI: 15:1e.0 [8086/2080] enabled
+PCI: 15:1e.1 [8086/2081] enabled
+PCI: 15:1e.2 [8086/2082] enabled
+PCI: 15:1e.3 [8086/2083] enabled
+PCI: 15:1e.4 [8086/2084] enabled
+PCI: 15:1e.5 [8086/2085] enabled
+PCI: 15:1e.6 [8086/2086] enabled
+PCI: 15:1f.0 [8086/2078] enabled
+PCI: 15:1f.1 [8086/2079] enabled
+PCI: 15:1f.2 [8086/207a] enabled
+PCI: 15:1f.3 [8086/207b] enabled
+PCI: 15:1f.4 [8086/207c] enabled
+PCI: 15:1f.5 [8086/207d] enabled
+PCI: 15:1f.6 [8086/207e] enabled
+PCI: 15:1f.7 [8086/207f] enabled
+PCI: 15:00.0 scanning...
+PCI: 15:00.0: No LTR support
+PCI: pci_scan_bus for bus 16
+scan_bus: bus PCI: 15:00.0 finished in 5 msecs
+PCI: 15:01.0 scanning...
+PCI: 15:01.0: No LTR support
+PCI: pci_scan_bus for bus 17
+scan_bus: bus PCI: 15:01.0 finished in 5 msecs
+PCI: 15:02.0 scanning...
+PCI: 15:02.0: No LTR support
+PCI: pci_scan_bus for bus 18
+scan_bus: bus PCI: 15:02.0 finished in 5 msecs
+PCI: 15:03.0 scanning...
+PCI: 15:03.0: No LTR support
+PCI: pci_scan_bus for bus 19
+scan_bus: bus PCI: 15:03.0 finished in 5 msecs
+PCI: pci_scan_bus for bus 63
+PCI: 63:00.0 subordinate bus PCI Express
+PCI: 63:00.0 [8086/2030] enabled
+PCI: 63:01.0 subordinate bus PCI Express
+PCI: 63:01.0 [8086/2031] enabled
+PCI: 63:02.0 subordinate bus PCI Express
+PCI: 63:02.0 [8086/2032] enabled
+PCI: 63:03.0 subordinate bus PCI Express
+PCI: 63:03.0 [8086/2033] enabled
+PCI: 63:05.0 [8086/2034] enabled
+PCI: 63:05.2 [8086/2035] enabled
+PCI: 63:05.6 [8086/2037] enabled
+PCI: 63:07.0 [8086/2038] enabled
+PCI: 63:07.1 [8086/2039] enabled
+PCI: 63:07.2 [8086/203a] enabled
+PCI: 63:07.3 [8086/203b] enabled
+PCI: 63:07.4 [8086/203c] enabled
+PCI: 63:07.7 [8086/203d] enabled
+PCI: 63:08.0 [8086/2066] enabled
+PCI: 63:08.1 [8086/2067] enabled
+PCI: 63:09.0 [8086/2066] enabled
+PCI: 63:09.1 [8086/2067] enabled
+PCI: 63:0a.0 [8086/2040] enabled
+PCI: 63:0a.1 [8086/2041] enabled
+PCI: 63:0a.2 [8086/2042] enabled
+PCI: 63:0a.3 [8086/2043] enabled
+PCI: 63:0a.4 [8086/2044] enabled
+PCI: 63:0a.5 [8086/2045] enabled
+PCI: 63:0a.6 [8086/2046] enabled
+PCI: 63:0a.7 [8086/2047] enabled
+PCI: 63:0b.0 [8086/2048] enabled
+PCI: 63:0b.1 [8086/2049] enabled
+PCI: 63:0b.2 [8086/204a] enabled
+PCI: 63:0b.3 [8086/204b] enabled
+PCI: 63:0c.0 [8086/2040] enabled
+PCI: 63:0c.1 [8086/2041] enabled
+PCI: 63:0c.2 [8086/2042] enabled
+PCI: 63:0c.3 [8086/2043] enabled
+PCI: 63:0c.4 [8086/2044] enabled
+PCI: 63:0c.5 [8086/2045] enabled
+PCI: 63:0c.6 [8086/2046] enabled
+PCI: 63:0c.7 [8086/2047] enabled
+PCI: 63:0d.0 [8086/2048] enabled
+PCI: 63:0d.1 [8086/2049] enabled
+PCI: 63:0d.2 [8086/204a] enabled
+PCI: 63:0d.3 [8086/204b] enabled
+PCI: 63:00.0 scanning...
+PCI: 63:00.0: No LTR support
+PCI: pci_scan_bus for bus 64
+scan_bus: bus PCI: 63:00.0 finished in 5 msecs
+PCI: 63:01.0 scanning...
+PCI: 63:01.0: No LTR support
+PCI: pci_scan_bus for bus 65
+scan_bus: bus PCI: 63:01.0 finished in 5 msecs
+PCI: 63:02.0 scanning...
+PCI: 63:02.0: No LTR support
+PCI: pci_scan_bus for bus 66
+scan_bus: bus PCI: 63:02.0 finished in 5 msecs
+PCI: 63:03.0 scanning...
+PCI: 63:03.0: No LTR support
+PCI: pci_scan_bus for bus 67
+scan_bus: bus PCI: 63:03.0 finished in 5 msecs
+PCI: pci_scan_bus for bus b2
+PCI: b2:00.0 subordinate bus PCI Express
+PCI: b2:00.0 [8086/203f] enabled
+PCI: b2:01.0 subordinate bus PCI Express
+PCI: b2:01.0 [8086/2031] enabled
+PCI: b2:02.0 subordinate bus PCI Express
+PCI: b2:02.0 [8086/2032] enabled
+PCI: b2:03.0 subordinate bus PCI Express
+PCI: b2:03.0 [8086/2033] enabled
+PCI: b2:05.0 [8086/2034] enabled
+PCI: b2:05.2 [8086/2035] enabled
+PCI: b2:05.6 [8086/2037] enabled
+PCI: b2:07.0 [8086/2038] enabled
+PCI: b2:07.1 [8086/2039] enabled
+PCI: b2:07.2 [8086/203a] enabled
+PCI: b2:07.3 [8086/203b] enabled
+PCI: b2:07.4 [8086/203c] enabled
+PCI: b2:07.7 [8086/203d] enabled
+PCI: b2:00.0 scanning...
+PCI: b2:00.0: No LTR support
+PCI: pci_scan_bus for bus b3
+scan_bus: bus PCI: b2:00.0 finished in 5 msecs
+PCI: b2:01.0 scanning...
+PCI: b2:01.0: No LTR support
+PCI: pci_scan_bus for bus b4
+scan_bus: bus PCI: b2:01.0 finished in 5 msecs
+PCI: b2:02.0 scanning...
+PCI: b2:02.0: No LTR support
+PCI: pci_scan_bus for bus b5
+PCI: b5:00.0 [8086/1528] enabled
+PCI: b5:00.1 [8086/1528] enabled
+Enabling Common Clock Configuration
+PCIE CLK PM is not supported by endpoint
+ASPM: Enabled L1
+PCIe: Max_Payload_Size adjusted to 256
+PCI: b5:00.0: No LTR support
+Enabling Common Clock Configuration
+PCIE CLK PM is not supported by endpoint
+ASPM: Enabled L1
+PCIe: Max_Payload_Size adjusted to 256
+PCI: b5:00.1: No LTR support
+scan_bus: bus PCI: b2:02.0 finished in 40 msecs
+PCI: b2:03.0 scanning...
+PCI: b2:03.0: No LTR support
+PCI: pci_scan_bus for bus b6
+scan_bus: bus PCI: b2:03.0 finished in 5 msecs
+scan_bus: bus DOMAIN: 0000 finished in 935 msecs
+scan_bus: bus Root Device finished in 945 msecs
+done
+BS: BS_DEV_ENUMERATE run times (exec / console): 3 / 952 ms
+found VGA at PCI: 02:00.0
+Setting up VGA for PCI: 02:00.0
+Setting PCI_BRIDGE_CTL_VGA for bridge PCI: 01:00.0
+Setting PCI_BRIDGE_CTL_VGA for bridge PCI: 00:1c.0
+Setting PCI_BRIDGE_CTL_VGA for bridge DOMAIN: 0000
+Setting PCI_BRIDGE_CTL_VGA for bridge Root Device
+Allocating resources...
+Reading resources...
+MC MAP: TOHM: 0x107fffffff
+MC MAP: MMIOL: 0xfbf00000
+MC MAP: MMCFG_BASE: 0x80000000
+MC MAP: MMCFG_LIMIT: 0x8fffffff
+MC MAP: TOLM: 0x7fffffff
+MC MAP: ME_BASE: 0xfffffffffff80000
+MC MAP: ME_LIMIT: 0x7ffff
+MC MAP: TSEGMB_BASE: 0x78000000
+MC MAP: TSEGMB_LIMIT: 0x7fffffff
+Available memory above 4GB: 63488M
+Done reading resources.
+=== Resource allocator: DOMAIN: 0000 - Pass 1 (gathering requirements) ===
+  PCI: 01:00.0 io: size: 0 align: 12 gran: 12 limit: ffffffff
+   PCI: 02:01.0 14 *  [0x0 - 0x3ff] io
+   PCI: 02:00.0 18 *  [0x400 - 0x47f] io
+  PCI: 01:00.0 io: size: 1000 align: 12 gran: 12 limit: ffff done
+ PCI: 00:1c.0 io: size: 0 align: 12 gran: 12 limit: ffff
+  PCI: 01:00.0 1c *  [0x0 - 0xfff] io
+ PCI: 00:1c.0 io: size: 1000 align: 12 gran: 12 limit: ffff done
+  PCI: 01:00.0 mem: size: 0 align: 20 gran: 20 limit: ffffffff
+   PCI: 02:00.0 10 *  [0x0 - 0x1ffffff] mem
+   PCI: 02:01.0 10 *  [0x2000000 - 0x203ffff] mem
+   PCI: 02:00.0 14 *  [0x2040000 - 0x205ffff] mem
+  PCI: 01:00.0 mem: size: 2100000 align: 25 gran: 20 limit: ffffffff done
+ PCI: 00:1c.0 mem: size: 0 align: 20 gran: 20 limit: ffffffff
+  PCI: 01:00.0 20 *  [0x0 - 0x20fffff] mem
+ PCI: 00:1c.0 mem: size: 2100000 align: 25 gran: 20 limit: ffffffff done
+  PCI: 01:00.0 prefmem: size: 0 align: 20 gran: 20 limit: ffffffffffffffff
+  PCI: 01:00.0 prefmem: size: 0 align: 20 gran: 20 limit: ffffffffffffffff done
+ PCI: 00:1c.0 prefmem: size: 0 align: 20 gran: 20 limit: ffffffffffffffff
+ PCI: 00:1c.0 prefmem: size: 0 align: 20 gran: 20 limit: ffffffffffffffff done
+=== Resource allocator: DOMAIN: 0000 - Pass 2 (allocating resources) ===
+DOMAIN: 0000 io: base: 0 size: 0 align: 0 gran: 0 limit: ffff
+ update_constraints: PCI: 00:1f.2 40 base 00000500 limit 000005ff io (fixed)
+ update_constraints: PCI: 00:1f.4 20 base 0000efa0 limit 0000efbf io (fixed)
+ update_constraints: PCI: 00:1f.0 00 base 00000000 limit 00000fff io (fixed)
+ update_constraints: PNP: 002e.0 00 base 0000002e limit 0000002f io (fixed)
+ update_constraints: PNP: 002e.2 60 base 000003f8 limit 000003ff io (fixed)
+ update_constraints: PNP: 002e.3 60 base 000002f8 limit 000002ff io (fixed)
+ DOMAIN: 0000: Resource ranges:
+ * Base: 1000, Size: dfa0, Tag: 100
+ * Base: efc0, Size: 1040, Tag: 100
+  PCI: 00:1c.0 1c *  [0x1000 - 0x1fff] limit: 1fff io
+  PCI: 00:11.5 20 *  [0x2000 - 0x201f] limit: 201f io
+  PCI: 00:17.0 20 *  [0x2020 - 0x203f] limit: 203f io
+  PCI: 00:11.5 18 *  [0x2040 - 0x2047] limit: 2047 io
+  PCI: 00:17.0 18 *  [0x2048 - 0x204f] limit: 204f io
+  PCI: 00:11.5 1c *  [0x2050 - 0x2053] limit: 2053 io
+  PCI: 00:17.0 1c *  [0x2054 - 0x2057] limit: 2057 io
+DOMAIN: 0000 io: base: 0 size: 0 align: 0 gran: 0 limit: ffff done
+DOMAIN: 0000 mem: base: 0 size: 0 align: 0 gran: 0 limit: 3fffffffffff
+ update_constraints: PCI: 00:05.0 00 base 00000000 limit 0009ffff mem (fixed)
+ update_constraints: PCI: 00:05.0 01 base 00100000 limit 777fffff mem (fixed)
+ update_constraints: PCI: 00:05.0 02 base 78000000 limit 7fffffff mem (fixed)
+ update_constraints: PCI: 00:05.0 03 base 77800000 limit 77ffffff mem (fixed)
+ update_constraints: PCI: 00:05.0 05 base 100000000 limit 107fffffff mem (fixed)
+ update_constraints: PCI: 00:05.0 06 base 80000000 limit 8fffffff mem (fixed)
+ update_constraints: PCI: 00:05.0 07 base fee00000 limit fee00fff mem (fixed)
+ update_constraints: PCI: 00:05.0 08 base 000a0000 limit 000bffff mem (fixed)
+ update_constraints: PCI: 00:05.0 09 base 000c0000 limit 000fffff mem (fixed)
+ update_constraints: PCI: 00:1f.1 10 base fd000000 limit fdffffff mem (fixed)
+ update_constraints: PCI: 00:1f.2 48 base fe000000 limit fe00ffff mem (fixed)
+ DOMAIN: 0000: Resource ranges:
+ * Base: 90000000, Size: 6d000000, Tag: 200
+ * Base: fe010000, Size: df0000, Tag: 200
+ * Base: fee01000, Size: 11ff000, Tag: 200
+ * Base: 1080000000, Size: 3fef80000000, Tag: 100200
+  PCI: 00:1c.0 20 *  [0x90000000 - 0x920fffff] limit: 920fffff mem
+  PCI: 00:11.5 24 *  [0x92100000 - 0x9217ffff] limit: 9217ffff mem
+  PCI: 00:17.0 24 *  [0x92180000 - 0x921fffff] limit: 921fffff mem
+  PCI: 00:14.0 10 *  [0x92200000 - 0x9220ffff] limit: 9220ffff mem
+  PCI: 00:04.0 10 *  [0x92210000 - 0x92213fff] limit: 92213fff mem
+  PCI: 00:04.1 10 *  [0x92214000 - 0x92217fff] limit: 92217fff mem
+  PCI: 00:04.2 10 *  [0x92218000 - 0x9221bfff] limit: 9221bfff mem
+  PCI: 00:04.3 10 *  [0x9221c000 - 0x9221ffff] limit: 9221ffff mem
+  PCI: 00:04.4 10 *  [0x92220000 - 0x92223fff] limit: 92223fff mem
+  PCI: 00:04.5 10 *  [0x92224000 - 0x92227fff] limit: 92227fff mem
+  PCI: 00:04.6 10 *  [0x92228000 - 0x9222bfff] limit: 9222bfff mem
+  PCI: 00:04.7 10 *  [0x9222c000 - 0x9222ffff] limit: 9222ffff mem
+  PCI: 00:1f.2 10 *  [0x92230000 - 0x92233fff] limit: 92233fff mem
+  PCI: 00:11.5 10 *  [0x92234000 - 0x92235fff] limit: 92235fff mem
+  PCI: 00:17.0 10 *  [0x92236000 - 0x92237fff] limit: 92237fff mem
+  PCI: 00:16.0 10 *  [0x92238000 - 0x92238fff] limit: 92238fff mem
+  PCI: 00:16.4 10 *  [0x92239000 - 0x92239fff] limit: 92239fff mem
+  PCI: 00:1f.5 10 *  [0x9223a000 - 0x9223afff] limit: 9223afff mem
+  PCI: 00:11.5 14 *  [0x9223b000 - 0x9223b0ff] limit: 9223b0ff mem
+  PCI: 00:17.0 14 *  [0x9223c000 - 0x9223c0ff] limit: 9223c0ff mem
+  PCI: 00:1f.4 10 *  [0x9223d000 - 0x9223d0ff] limit: 9223d0ff mem
+DOMAIN: 0000 mem: base: 0 size: 0 align: 0 gran: 0 limit: 3fffffffffff done
+PCI: 00:1c.0 io: base: 1000 size: 1000 align: 12 gran: 12 limit: 1fff
+ PCI: 00:1c.0: Resource ranges:
+ * Base: 1000, Size: 1000, Tag: 100
+  PCI: 01:00.0 1c *  [0x1000 - 0x1fff] limit: 1fff io
+PCI: 00:1c.0 io: base: 1000 size: 1000 align: 12 gran: 12 limit: 1fff done
+PCI: 00:1c.0 mem: base: 90000000 size: 2100000 align: 25 gran: 20 limit: 920fffff
+ PCI: 00:1c.0: Resource ranges:
+ * Base: 90000000, Size: 2100000, Tag: 200
+  PCI: 01:00.0 20 *  [0x90000000 - 0x920fffff] limit: 920fffff mem
+PCI: 00:1c.0 mem: base: 90000000 size: 2100000 align: 25 gran: 20 limit: 920fffff done
+PCI: 01:00.0 io: base: 1000 size: 1000 align: 12 gran: 12 limit: 1fff
+ PCI: 01:00.0: Resource ranges:
+ * Base: 1000, Size: 1000, Tag: 100
+  PCI: 02:01.0 14 *  [0x1000 - 0x13ff] limit: 13ff io
+  PCI: 02:00.0 18 *  [0x1400 - 0x147f] limit: 147f io
+PCI: 01:00.0 io: base: 1000 size: 1000 align: 12 gran: 12 limit: 1fff done
+PCI: 01:00.0 mem: base: 90000000 size: 2100000 align: 25 gran: 20 limit: 920fffff
+ PCI: 01:00.0: Resource ranges:
+ * Base: 90000000, Size: 2100000, Tag: 200
+  PCI: 02:00.0 10 *  [0x90000000 - 0x91ffffff] limit: 91ffffff mem
+  PCI: 02:01.0 10 *  [0x92000000 - 0x9203ffff] limit: 9203ffff mem
+  PCI: 02:00.0 14 *  [0x92040000 - 0x9205ffff] limit: 9205ffff mem
+PCI: 01:00.0 mem: base: 90000000 size: 2100000 align: 25 gran: 20 limit: 920fffff done
+=== Resource allocator: DOMAIN: 0000 - resource allocation complete ===
+MC MAP: TOHM: 0x107fffffff
+MC MAP: MMIOL: 0xfbf00000
+MC MAP: MMCFG_BASE: 0x80000000
+MC MAP: MMCFG_LIMIT: 0x8fffffff
+MC MAP: TOLM: 0x7fffffff
+MC MAP: ME_BASE: 0xfffffffffff80000
+MC MAP: ME_LIMIT: 0x7ffff
+MC MAP: TSEGMB_BASE: 0x78000000
+MC MAP: TSEGMB_LIMIT: 0x7fffffff
+Available memory above 4GB: 63488M
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:377 dev: PCI: 02:00.0
+assign_stack_resources:383 dev: PCI: 02:00.0, flags: 0x200
+assign_stack_resources:383 dev: PCI: 02:00.0, flags: 0x200
+assign_stack_resources:383 dev: PCI: 02:00.0, flags: 0x100
+assign_stack_resources:377 dev: PCI: 02:01.0
+assign_stack_resources:383 dev: PCI: 02:01.0, flags: 0x200
+assign_stack_resources:383 dev: PCI: 02:01.0, flags: 0x100
+get_res_type:37 flags: 0x81202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:377 dev: PCI: 01:00.0
+assign_stack_resources:383 dev: PCI: 01:00.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 01:00.0, flags: 0x81202
+assign_stack_resources:383 dev: PCI: 01:00.0, flags: 0x80202
+get_res_type:37 flags: 0x81202
+get_res_type:37 flags: 0x81202
+get_res_type:37 flags: 0x81202
+get_res_type:37 flags: 0x81202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:377 dev: PCI: 02:00.0
+assign_stack_resources:383 dev: PCI: 02:00.0, flags: 0x200
+assign_stack_resources:383 dev: PCI: 02:00.0, flags: 0x200
+assign_stack_resources:383 dev: PCI: 02:00.0, flags: 0x40000100
+assign_stack_resources:377 dev: PCI: 02:01.0
+assign_stack_resources:383 dev: PCI: 02:01.0, flags: 0x200
+assign_stack_resources:383 dev: PCI: 02:01.0, flags: 0x40000100
+get_res_type:37 flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:377 dev: PCI: 01:00.0
+assign_stack_resources:383 dev: PCI: 01:00.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 01:00.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 01:00.0, flags: 0x80202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:377 dev: PCI: 02:00.0
+assign_stack_resources:383 dev: PCI: 02:00.0, flags: 0x200
+assign_stack_resources:383 dev: PCI: 02:00.0, flags: 0x200
+assign_stack_resources:383 dev: PCI: 02:00.0, flags: 0x40000100
+assign_stack_resources:377 dev: PCI: 02:01.0
+assign_stack_resources:383 dev: PCI: 02:01.0, flags: 0x200
+assign_stack_resources:383 dev: PCI: 02:01.0, flags: 0x40000100
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:377 dev: PCI: 01:00.0
+assign_stack_resources:383 dev: PCI: 01:00.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 01:00.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 01:00.0, flags: 0x40080202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+get_res_type:37 flags: 0x81202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 3
+assign_stack_resources:373 rt: 0
+assign_stack_resources:377 dev: PCI: 00:00.0
+assign_stack_resources:377 dev: PCI: 00:04.0
+assign_stack_resources:383 dev: PCI: 00:04.0, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:04.1
+assign_stack_resources:383 dev: PCI: 00:04.1, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:04.2
+assign_stack_resources:383 dev: PCI: 00:04.2, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:04.3
+assign_stack_resources:383 dev: PCI: 00:04.3, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:04.4
+assign_stack_resources:383 dev: PCI: 00:04.4, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:04.5
+assign_stack_resources:383 dev: PCI: 00:04.5, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:04.6
+assign_stack_resources:383 dev: PCI: 00:04.6, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:04.7
+assign_stack_resources:383 dev: PCI: 00:04.7, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:05.0
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xe0004200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xe0004200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0004200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0004200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xe0004200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0000200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0000200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0000200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0004200
+assign_stack_resources:377 dev: PCI: 00:05.2
+assign_stack_resources:377 dev: PCI: 00:05.4
+assign_stack_resources:377 dev: PCI: 00:08.0
+assign_stack_resources:377 dev: PCI: 00:08.1
+assign_stack_resources:377 dev: PCI: 00:08.2
+assign_stack_resources:377 dev: PCI: 00:11.0
+assign_stack_resources:377 dev: PCI: 00:11.1
+assign_stack_resources:377 dev: PCI: 00:11.5
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x200
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x200
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x100
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x100
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x100
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x200
+assign_stack_resources:377 dev: PCI: 00:14.0
+assign_stack_resources:383 dev: PCI: 00:14.0, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:16.0
+assign_stack_resources:383 dev: PCI: 00:16.0, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:16.1
+assign_stack_resources:377 dev: PCI: 00:16.4
+assign_stack_resources:383 dev: PCI: 00:16.4, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:17.0
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x200
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x200
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x100
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x100
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x100
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x200
+assign_stack_resources:377 dev: PCI: 00:1c.0
+assign_stack_resources:383 dev: PCI: 00:1c.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 00:1c.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 00:1c.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 00:1c.4
+assign_stack_resources:383 dev: PCI: 00:1c.4, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 00:1c.4, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 00:1c.4, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 00:1f.1
+assign_stack_resources:383 dev: PCI: 00:1f.1, flags: 0xf0000200
+assign_stack_resources:377 dev: PCI: 00:1f.2
+assign_stack_resources:383 dev: PCI: 00:1f.2, flags: 0x200
+assign_stack_resources:383 dev: PCI: 00:1f.2, flags: 0xd0000200
+assign_stack_resources:383 dev: PCI: 00:1f.2, flags: 0xc0000100
+assign_stack_resources:377 dev: PCI: 00:1f.4
+assign_stack_resources:383 dev: PCI: 00:1f.4, flags: 0x201
+assign_stack_resources:383 dev: PCI: 00:1f.4, flags: 0xf0000100
+assign_stack_resources:377 dev: PCI: 00:1f.5
+assign_stack_resources:383 dev: PCI: 00:1f.5, flags: 0x200
+assign_stack_resources:377 dev: PCI: 00:1f.0
+assign_stack_resources:383 dev: PCI: 00:1f.0, flags: 0xc0000100
+assign_stack_resources:373 rt: 1
+assign_stack_resources:377 dev: PCI: 00:00.0
+assign_stack_resources:377 dev: PCI: 00:04.0
+assign_stack_resources:383 dev: PCI: 00:04.0, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:04.1
+assign_stack_resources:383 dev: PCI: 00:04.1, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:04.2
+assign_stack_resources:383 dev: PCI: 00:04.2, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:04.3
+assign_stack_resources:383 dev: PCI: 00:04.3, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:04.4
+assign_stack_resources:383 dev: PCI: 00:04.4, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:04.5
+assign_stack_resources:383 dev: PCI: 00:04.5, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:04.6
+assign_stack_resources:383 dev: PCI: 00:04.6, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:04.7
+assign_stack_resources:383 dev: PCI: 00:04.7, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:05.0
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xe0004200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xe0004200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0004200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0004200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xe0004200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0000200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0000200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0000200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0004200
+assign_stack_resources:377 dev: PCI: 00:05.2
+assign_stack_resources:377 dev: PCI: 00:05.4
+assign_stack_resources:377 dev: PCI: 00:08.0
+assign_stack_resources:377 dev: PCI: 00:08.1
+assign_stack_resources:377 dev: PCI: 00:08.2
+assign_stack_resources:377 dev: PCI: 00:11.0
+assign_stack_resources:377 dev: PCI: 00:11.1
+assign_stack_resources:377 dev: PCI: 00:11.5
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x200
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x200
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x40000100
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x40000100
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x40000100
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x200
+assign_stack_resources:377 dev: PCI: 00:14.0
+assign_stack_resources:383 dev: PCI: 00:14.0, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:16.0
+assign_stack_resources:383 dev: PCI: 00:16.0, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:16.1
+assign_stack_resources:377 dev: PCI: 00:16.4
+assign_stack_resources:383 dev: PCI: 00:16.4, flags: 0x201
+assign_stack_resources:377 dev: PCI: 00:17.0
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x200
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x200
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x40000100
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x40000100
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x40000100
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x200
+assign_stack_resources:377 dev: PCI: 00:1c.0
+assign_stack_resources:383 dev: PCI: 00:1c.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 00:1c.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 00:1c.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 00:1c.4
+assign_stack_resources:383 dev: PCI: 00:1c.4, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 00:1c.4, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 00:1c.4, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 00:1f.1
+assign_stack_resources:383 dev: PCI: 00:1f.1, flags: 0xf0000200
+assign_stack_resources:377 dev: PCI: 00:1f.2
+assign_stack_resources:383 dev: PCI: 00:1f.2, flags: 0x200
+assign_stack_resources:383 dev: PCI: 00:1f.2, flags: 0xd0000200
+assign_stack_resources:383 dev: PCI: 00:1f.2, flags: 0xc0000100
+assign_stack_resources:377 dev: PCI: 00:1f.4
+assign_stack_resources:383 dev: PCI: 00:1f.4, flags: 0x201
+assign_stack_resources:383 dev: PCI: 00:1f.4, flags: 0xf0000100
+assign_stack_resources:377 dev: PCI: 00:1f.5
+assign_stack_resources:383 dev: PCI: 00:1f.5, flags: 0x200
+assign_stack_resources:377 dev: PCI: 00:1f.0
+assign_stack_resources:383 dev: PCI: 00:1f.0, flags: 0xc0000100
+assign_stack_resources:373 rt: 2
+assign_stack_resources:377 dev: PCI: 00:00.0
+assign_stack_resources:377 dev: PCI: 00:04.0
+assign_stack_resources:383 dev: PCI: 00:04.0, flags: 0x40000201
+assign_stack_resources:377 dev: PCI: 00:04.1
+assign_stack_resources:383 dev: PCI: 00:04.1, flags: 0x40000201
+assign_stack_resources:377 dev: PCI: 00:04.2
+assign_stack_resources:383 dev: PCI: 00:04.2, flags: 0x40000201
+assign_stack_resources:377 dev: PCI: 00:04.3
+assign_stack_resources:383 dev: PCI: 00:04.3, flags: 0x40000201
+assign_stack_resources:377 dev: PCI: 00:04.4
+assign_stack_resources:383 dev: PCI: 00:04.4, flags: 0x40000201
+assign_stack_resources:377 dev: PCI: 00:04.5
+assign_stack_resources:383 dev: PCI: 00:04.5, flags: 0x40000201
+assign_stack_resources:377 dev: PCI: 00:04.6
+assign_stack_resources:383 dev: PCI: 00:04.6, flags: 0x40000201
+assign_stack_resources:377 dev: PCI: 00:04.7
+assign_stack_resources:383 dev: PCI: 00:04.7, flags: 0x40000201
+assign_stack_resources:377 dev: PCI: 00:05.0
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xe0004200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xe0004200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0004200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0004200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xe0004200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0000200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0000200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0000200
+assign_stack_resources:383 dev: PCI: 00:05.0, flags: 0xf0004200
+assign_stack_resources:377 dev: PCI: 00:05.2
+assign_stack_resources:377 dev: PCI: 00:05.4
+assign_stack_resources:377 dev: PCI: 00:08.0
+assign_stack_resources:377 dev: PCI: 00:08.1
+assign_stack_resources:377 dev: PCI: 00:08.2
+assign_stack_resources:377 dev: PCI: 00:11.0
+assign_stack_resources:377 dev: PCI: 00:11.1
+assign_stack_resources:377 dev: PCI: 00:11.5
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x40000200
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x40000200
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x40000100
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x40000100
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x40000100
+assign_stack_resources:383 dev: PCI: 00:11.5, flags: 0x40000200
+assign_stack_resources:377 dev: PCI: 00:14.0
+assign_stack_resources:383 dev: PCI: 00:14.0, flags: 0x40000201
+assign_stack_resources:377 dev: PCI: 00:16.0
+assign_stack_resources:383 dev: PCI: 00:16.0, flags: 0x40000201
+assign_stack_resources:377 dev: PCI: 00:16.1
+assign_stack_resources:377 dev: PCI: 00:16.4
+assign_stack_resources:383 dev: PCI: 00:16.4, flags: 0x40000201
+assign_stack_resources:377 dev: PCI: 00:17.0
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x40000200
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x40000200
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x40000100
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x40000100
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x40000100
+assign_stack_resources:383 dev: PCI: 00:17.0, flags: 0x40000200
+assign_stack_resources:377 dev: PCI: 00:1c.0
+assign_stack_resources:383 dev: PCI: 00:1c.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 00:1c.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 00:1c.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 00:1c.4
+assign_stack_resources:383 dev: PCI: 00:1c.4, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 00:1c.4, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 00:1c.4, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 00:1f.1
+assign_stack_resources:383 dev: PCI: 00:1f.1, flags: 0xf0000200
+assign_stack_resources:377 dev: PCI: 00:1f.2
+assign_stack_resources:383 dev: PCI: 00:1f.2, flags: 0x40000200
+assign_stack_resources:383 dev: PCI: 00:1f.2, flags: 0xd0000200
+assign_stack_resources:383 dev: PCI: 00:1f.2, flags: 0xc0000100
+assign_stack_resources:377 dev: PCI: 00:1f.4
+assign_stack_resources:383 dev: PCI: 00:1f.4, flags: 0x40000201
+assign_stack_resources:383 dev: PCI: 00:1f.4, flags: 0xf0000100
+assign_stack_resources:377 dev: PCI: 00:1f.5
+assign_stack_resources:383 dev: PCI: 00:1f.5, flags: 0x40000200
+assign_stack_resources:377 dev: PCI: 00:1f.0
+assign_stack_resources:383 dev: PCI: 00:1f.0, flags: 0xc0000100
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+get_res_type:37 flags: 0x81202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+get_res_type:37 flags: 0x81202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+get_res_type:37 flags: 0x81202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+get_res_type:37 flags: 0x81202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 3
+assign_stack_resources:373 rt: 0
+assign_stack_resources:377 dev: PCI: 15:00.0
+assign_stack_resources:383 dev: PCI: 15:00.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 15:00.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 15:00.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 15:01.0
+assign_stack_resources:383 dev: PCI: 15:01.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 15:01.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 15:01.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 15:02.0
+assign_stack_resources:383 dev: PCI: 15:02.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 15:02.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 15:02.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 15:03.0
+assign_stack_resources:383 dev: PCI: 15:03.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 15:03.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 15:03.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 15:05.0
+assign_stack_resources:377 dev: PCI: 15:05.2
+assign_stack_resources:377 dev: PCI: 15:05.6
+assign_stack_resources:377 dev: PCI: 15:07.0
+assign_stack_resources:377 dev: PCI: 15:07.1
+assign_stack_resources:377 dev: PCI: 15:07.2
+assign_stack_resources:377 dev: PCI: 15:07.3
+assign_stack_resources:377 dev: PCI: 15:07.4
+assign_stack_resources:377 dev: PCI: 15:07.7
+assign_stack_resources:377 dev: PCI: 15:08.0
+assign_stack_resources:377 dev: PCI: 15:08.1
+assign_stack_resources:377 dev: PCI: 15:08.2
+assign_stack_resources:377 dev: PCI: 15:08.3
+assign_stack_resources:377 dev: PCI: 15:08.4
+assign_stack_resources:377 dev: PCI: 15:08.5
+assign_stack_resources:377 dev: PCI: 15:08.6
+assign_stack_resources:377 dev: PCI: 15:08.7
+assign_stack_resources:377 dev: PCI: 15:09.0
+assign_stack_resources:377 dev: PCI: 15:09.1
+assign_stack_resources:377 dev: PCI: 15:09.2
+assign_stack_resources:377 dev: PCI: 15:09.3
+assign_stack_resources:377 dev: PCI: 15:09.4
+assign_stack_resources:377 dev: PCI: 15:09.5
+assign_stack_resources:377 dev: PCI: 15:09.6
+assign_stack_resources:377 dev: PCI: 15:09.7
+assign_stack_resources:377 dev: PCI: 15:0a.0
+assign_stack_resources:377 dev: PCI: 15:0a.1
+assign_stack_resources:377 dev: PCI: 15:0a.2
+assign_stack_resources:377 dev: PCI: 15:0a.3
+assign_stack_resources:377 dev: PCI: 15:0a.4
+assign_stack_resources:377 dev: PCI: 15:0a.5
+assign_stack_resources:377 dev: PCI: 15:0a.6
+assign_stack_resources:377 dev: PCI: 15:0a.7
+assign_stack_resources:377 dev: PCI: 15:0b.0
+assign_stack_resources:377 dev: PCI: 15:0b.1
+assign_stack_resources:377 dev: PCI: 15:0b.2
+assign_stack_resources:377 dev: PCI: 15:0b.3
+assign_stack_resources:377 dev: PCI: 15:0e.0
+assign_stack_resources:377 dev: PCI: 15:0e.1
+assign_stack_resources:377 dev: PCI: 15:0e.2
+assign_stack_resources:377 dev: PCI: 15:0e.3
+assign_stack_resources:377 dev: PCI: 15:0e.4
+assign_stack_resources:377 dev: PCI: 15:0e.5
+assign_stack_resources:377 dev: PCI: 15:0e.6
+assign_stack_resources:377 dev: PCI: 15:0e.7
+assign_stack_resources:377 dev: PCI: 15:0f.0
+assign_stack_resources:377 dev: PCI: 15:0f.1
+assign_stack_resources:377 dev: PCI: 15:0f.2
+assign_stack_resources:377 dev: PCI: 15:0f.3
+assign_stack_resources:377 dev: PCI: 15:0f.4
+assign_stack_resources:377 dev: PCI: 15:0f.5
+assign_stack_resources:377 dev: PCI: 15:0f.6
+assign_stack_resources:377 dev: PCI: 15:0f.7
+assign_stack_resources:377 dev: PCI: 15:10.0
+assign_stack_resources:377 dev: PCI: 15:10.1
+assign_stack_resources:377 dev: PCI: 15:10.2
+assign_stack_resources:377 dev: PCI: 15:10.3
+assign_stack_resources:377 dev: PCI: 15:10.4
+assign_stack_resources:377 dev: PCI: 15:10.5
+assign_stack_resources:377 dev: PCI: 15:10.6
+assign_stack_resources:377 dev: PCI: 15:10.7
+assign_stack_resources:377 dev: PCI: 15:11.0
+assign_stack_resources:377 dev: PCI: 15:11.1
+assign_stack_resources:377 dev: PCI: 15:11.2
+assign_stack_resources:377 dev: PCI: 15:11.3
+assign_stack_resources:377 dev: PCI: 15:14.0
+assign_stack_resources:377 dev: PCI: 15:14.1
+assign_stack_resources:377 dev: PCI: 15:14.2
+assign_stack_resources:377 dev: PCI: 15:14.3
+assign_stack_resources:377 dev: PCI: 15:14.4
+assign_stack_resources:377 dev: PCI: 15:14.5
+assign_stack_resources:377 dev: PCI: 15:14.6
+assign_stack_resources:377 dev: PCI: 15:14.7
+assign_stack_resources:377 dev: PCI: 15:15.0
+assign_stack_resources:377 dev: PCI: 15:15.1
+assign_stack_resources:377 dev: PCI: 15:15.2
+assign_stack_resources:377 dev: PCI: 15:15.3
+assign_stack_resources:377 dev: PCI: 15:15.4
+assign_stack_resources:377 dev: PCI: 15:15.5
+assign_stack_resources:377 dev: PCI: 15:15.6
+assign_stack_resources:377 dev: PCI: 15:15.7
+assign_stack_resources:377 dev: PCI: 15:16.0
+assign_stack_resources:377 dev: PCI: 15:16.1
+assign_stack_resources:377 dev: PCI: 15:16.2
+assign_stack_resources:377 dev: PCI: 15:16.3
+assign_stack_resources:377 dev: PCI: 15:16.4
+assign_stack_resources:377 dev: PCI: 15:16.5
+assign_stack_resources:377 dev: PCI: 15:16.6
+assign_stack_resources:377 dev: PCI: 15:16.7
+assign_stack_resources:377 dev: PCI: 15:17.0
+assign_stack_resources:377 dev: PCI: 15:17.1
+assign_stack_resources:377 dev: PCI: 15:17.2
+assign_stack_resources:377 dev: PCI: 15:17.3
+assign_stack_resources:377 dev: PCI: 15:1d.0
+assign_stack_resources:377 dev: PCI: 15:1d.1
+assign_stack_resources:377 dev: PCI: 15:1d.2
+assign_stack_resources:377 dev: PCI: 15:1d.3
+assign_stack_resources:377 dev: PCI: 15:1e.0
+assign_stack_resources:377 dev: PCI: 15:1e.1
+assign_stack_resources:377 dev: PCI: 15:1e.2
+assign_stack_resources:377 dev: PCI: 15:1e.3
+assign_stack_resources:377 dev: PCI: 15:1e.4
+assign_stack_resources:377 dev: PCI: 15:1e.5
+assign_stack_resources:377 dev: PCI: 15:1e.6
+assign_stack_resources:377 dev: PCI: 15:1f.0
+assign_stack_resources:377 dev: PCI: 15:1f.1
+assign_stack_resources:377 dev: PCI: 15:1f.2
+assign_stack_resources:377 dev: PCI: 15:1f.3
+assign_stack_resources:377 dev: PCI: 15:1f.4
+assign_stack_resources:377 dev: PCI: 15:1f.5
+assign_stack_resources:377 dev: PCI: 15:1f.6
+assign_stack_resources:377 dev: PCI: 15:1f.7
+assign_stack_resources:373 rt: 1
+assign_stack_resources:377 dev: PCI: 15:00.0
+assign_stack_resources:383 dev: PCI: 15:00.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 15:00.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 15:00.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 15:01.0
+assign_stack_resources:383 dev: PCI: 15:01.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 15:01.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 15:01.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 15:02.0
+assign_stack_resources:383 dev: PCI: 15:02.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 15:02.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 15:02.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 15:03.0
+assign_stack_resources:383 dev: PCI: 15:03.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 15:03.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 15:03.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 15:05.0
+assign_stack_resources:377 dev: PCI: 15:05.2
+assign_stack_resources:377 dev: PCI: 15:05.6
+assign_stack_resources:377 dev: PCI: 15:07.0
+assign_stack_resources:377 dev: PCI: 15:07.1
+assign_stack_resources:377 dev: PCI: 15:07.2
+assign_stack_resources:377 dev: PCI: 15:07.3
+assign_stack_resources:377 dev: PCI: 15:07.4
+assign_stack_resources:377 dev: PCI: 15:07.7
+assign_stack_resources:377 dev: PCI: 15:08.0
+assign_stack_resources:377 dev: PCI: 15:08.1
+assign_stack_resources:377 dev: PCI: 15:08.2
+assign_stack_resources:377 dev: PCI: 15:08.3
+assign_stack_resources:377 dev: PCI: 15:08.4
+assign_stack_resources:377 dev: PCI: 15:08.5
+assign_stack_resources:377 dev: PCI: 15:08.6
+assign_stack_resources:377 dev: PCI: 15:08.7
+assign_stack_resources:377 dev: PCI: 15:09.0
+assign_stack_resources:377 dev: PCI: 15:09.1
+assign_stack_resources:377 dev: PCI: 15:09.2
+assign_stack_resources:377 dev: PCI: 15:09.3
+assign_stack_resources:377 dev: PCI: 15:09.4
+assign_stack_resources:377 dev: PCI: 15:09.5
+assign_stack_resources:377 dev: PCI: 15:09.6
+assign_stack_resources:377 dev: PCI: 15:09.7
+assign_stack_resources:377 dev: PCI: 15:0a.0
+assign_stack_resources:377 dev: PCI: 15:0a.1
+assign_stack_resources:377 dev: PCI: 15:0a.2
+assign_stack_resources:377 dev: PCI: 15:0a.3
+assign_stack_resources:377 dev: PCI: 15:0a.4
+assign_stack_resources:377 dev: PCI: 15:0a.5
+assign_stack_resources:377 dev: PCI: 15:0a.6
+assign_stack_resources:377 dev: PCI: 15:0a.7
+assign_stack_resources:377 dev: PCI: 15:0b.0
+assign_stack_resources:377 dev: PCI: 15:0b.1
+assign_stack_resources:377 dev: PCI: 15:0b.2
+assign_stack_resources:377 dev: PCI: 15:0b.3
+assign_stack_resources:377 dev: PCI: 15:0e.0
+assign_stack_resources:377 dev: PCI: 15:0e.1
+assign_stack_resources:377 dev: PCI: 15:0e.2
+assign_stack_resources:377 dev: PCI: 15:0e.3
+assign_stack_resources:377 dev: PCI: 15:0e.4
+assign_stack_resources:377 dev: PCI: 15:0e.5
+assign_stack_resources:377 dev: PCI: 15:0e.6
+assign_stack_resources:377 dev: PCI: 15:0e.7
+assign_stack_resources:377 dev: PCI: 15:0f.0
+assign_stack_resources:377 dev: PCI: 15:0f.1
+assign_stack_resources:377 dev: PCI: 15:0f.2
+assign_stack_resources:377 dev: PCI: 15:0f.3
+assign_stack_resources:377 dev: PCI: 15:0f.4
+assign_stack_resources:377 dev: PCI: 15:0f.5
+assign_stack_resources:377 dev: PCI: 15:0f.6
+assign_stack_resources:377 dev: PCI: 15:0f.7
+assign_stack_resources:377 dev: PCI: 15:10.0
+assign_stack_resources:377 dev: PCI: 15:10.1
+assign_stack_resources:377 dev: PCI: 15:10.2
+assign_stack_resources:377 dev: PCI: 15:10.3
+assign_stack_resources:377 dev: PCI: 15:10.4
+assign_stack_resources:377 dev: PCI: 15:10.5
+assign_stack_resources:377 dev: PCI: 15:10.6
+assign_stack_resources:377 dev: PCI: 15:10.7
+assign_stack_resources:377 dev: PCI: 15:11.0
+assign_stack_resources:377 dev: PCI: 15:11.1
+assign_stack_resources:377 dev: PCI: 15:11.2
+assign_stack_resources:377 dev: PCI: 15:11.3
+assign_stack_resources:377 dev: PCI: 15:14.0
+assign_stack_resources:377 dev: PCI: 15:14.1
+assign_stack_resources:377 dev: PCI: 15:14.2
+assign_stack_resources:377 dev: PCI: 15:14.3
+assign_stack_resources:377 dev: PCI: 15:14.4
+assign_stack_resources:377 dev: PCI: 15:14.5
+assign_stack_resources:377 dev: PCI: 15:14.6
+assign_stack_resources:377 dev: PCI: 15:14.7
+assign_stack_resources:377 dev: PCI: 15:15.0
+assign_stack_resources:377 dev: PCI: 15:15.1
+assign_stack_resources:377 dev: PCI: 15:15.2
+assign_stack_resources:377 dev: PCI: 15:15.3
+assign_stack_resources:377 dev: PCI: 15:15.4
+assign_stack_resources:377 dev: PCI: 15:15.5
+assign_stack_resources:377 dev: PCI: 15:15.6
+assign_stack_resources:377 dev: PCI: 15:15.7
+assign_stack_resources:377 dev: PCI: 15:16.0
+assign_stack_resources:377 dev: PCI: 15:16.1
+assign_stack_resources:377 dev: PCI: 15:16.2
+assign_stack_resources:377 dev: PCI: 15:16.3
+assign_stack_resources:377 dev: PCI: 15:16.4
+assign_stack_resources:377 dev: PCI: 15:16.5
+assign_stack_resources:377 dev: PCI: 15:16.6
+assign_stack_resources:377 dev: PCI: 15:16.7
+assign_stack_resources:377 dev: PCI: 15:17.0
+assign_stack_resources:377 dev: PCI: 15:17.1
+assign_stack_resources:377 dev: PCI: 15:17.2
+assign_stack_resources:377 dev: PCI: 15:17.3
+assign_stack_resources:377 dev: PCI: 15:1d.0
+assign_stack_resources:377 dev: PCI: 15:1d.1
+assign_stack_resources:377 dev: PCI: 15:1d.2
+assign_stack_resources:377 dev: PCI: 15:1d.3
+assign_stack_resources:377 dev: PCI: 15:1e.0
+assign_stack_resources:377 dev: PCI: 15:1e.1
+assign_stack_resources:377 dev: PCI: 15:1e.2
+assign_stack_resources:377 dev: PCI: 15:1e.3
+assign_stack_resources:377 dev: PCI: 15:1e.4
+assign_stack_resources:377 dev: PCI: 15:1e.5
+assign_stack_resources:377 dev: PCI: 15:1e.6
+assign_stack_resources:377 dev: PCI: 15:1f.0
+assign_stack_resources:377 dev: PCI: 15:1f.1
+assign_stack_resources:377 dev: PCI: 15:1f.2
+assign_stack_resources:377 dev: PCI: 15:1f.3
+assign_stack_resources:377 dev: PCI: 15:1f.4
+assign_stack_resources:377 dev: PCI: 15:1f.5
+assign_stack_resources:377 dev: PCI: 15:1f.6
+assign_stack_resources:377 dev: PCI: 15:1f.7
+assign_stack_resources:373 rt: 2
+assign_stack_resources:377 dev: PCI: 15:00.0
+assign_stack_resources:383 dev: PCI: 15:00.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 15:00.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 15:00.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 15:01.0
+assign_stack_resources:383 dev: PCI: 15:01.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 15:01.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 15:01.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 15:02.0
+assign_stack_resources:383 dev: PCI: 15:02.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 15:02.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 15:02.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 15:03.0
+assign_stack_resources:383 dev: PCI: 15:03.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 15:03.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 15:03.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 15:05.0
+assign_stack_resources:377 dev: PCI: 15:05.2
+assign_stack_resources:377 dev: PCI: 15:05.6
+assign_stack_resources:377 dev: PCI: 15:07.0
+assign_stack_resources:377 dev: PCI: 15:07.1
+assign_stack_resources:377 dev: PCI: 15:07.2
+assign_stack_resources:377 dev: PCI: 15:07.3
+assign_stack_resources:377 dev: PCI: 15:07.4
+assign_stack_resources:377 dev: PCI: 15:07.7
+assign_stack_resources:377 dev: PCI: 15:08.0
+assign_stack_resources:377 dev: PCI: 15:08.1
+assign_stack_resources:377 dev: PCI: 15:08.2
+assign_stack_resources:377 dev: PCI: 15:08.3
+assign_stack_resources:377 dev: PCI: 15:08.4
+assign_stack_resources:377 dev: PCI: 15:08.5
+assign_stack_resources:377 dev: PCI: 15:08.6
+assign_stack_resources:377 dev: PCI: 15:08.7
+assign_stack_resources:377 dev: PCI: 15:09.0
+assign_stack_resources:377 dev: PCI: 15:09.1
+assign_stack_resources:377 dev: PCI: 15:09.2
+assign_stack_resources:377 dev: PCI: 15:09.3
+assign_stack_resources:377 dev: PCI: 15:09.4
+assign_stack_resources:377 dev: PCI: 15:09.5
+assign_stack_resources:377 dev: PCI: 15:09.6
+assign_stack_resources:377 dev: PCI: 15:09.7
+assign_stack_resources:377 dev: PCI: 15:0a.0
+assign_stack_resources:377 dev: PCI: 15:0a.1
+assign_stack_resources:377 dev: PCI: 15:0a.2
+assign_stack_resources:377 dev: PCI: 15:0a.3
+assign_stack_resources:377 dev: PCI: 15:0a.4
+assign_stack_resources:377 dev: PCI: 15:0a.5
+assign_stack_resources:377 dev: PCI: 15:0a.6
+assign_stack_resources:377 dev: PCI: 15:0a.7
+assign_stack_resources:377 dev: PCI: 15:0b.0
+assign_stack_resources:377 dev: PCI: 15:0b.1
+assign_stack_resources:377 dev: PCI: 15:0b.2
+assign_stack_resources:377 dev: PCI: 15:0b.3
+assign_stack_resources:377 dev: PCI: 15:0e.0
+assign_stack_resources:377 dev: PCI: 15:0e.1
+assign_stack_resources:377 dev: PCI: 15:0e.2
+assign_stack_resources:377 dev: PCI: 15:0e.3
+assign_stack_resources:377 dev: PCI: 15:0e.4
+assign_stack_resources:377 dev: PCI: 15:0e.5
+assign_stack_resources:377 dev: PCI: 15:0e.6
+assign_stack_resources:377 dev: PCI: 15:0e.7
+assign_stack_resources:377 dev: PCI: 15:0f.0
+assign_stack_resources:377 dev: PCI: 15:0f.1
+assign_stack_resources:377 dev: PCI: 15:0f.2
+assign_stack_resources:377 dev: PCI: 15:0f.3
+assign_stack_resources:377 dev: PCI: 15:0f.4
+assign_stack_resources:377 dev: PCI: 15:0f.5
+assign_stack_resources:377 dev: PCI: 15:0f.6
+assign_stack_resources:377 dev: PCI: 15:0f.7
+assign_stack_resources:377 dev: PCI: 15:10.0
+assign_stack_resources:377 dev: PCI: 15:10.1
+assign_stack_resources:377 dev: PCI: 15:10.2
+assign_stack_resources:377 dev: PCI: 15:10.3
+assign_stack_resources:377 dev: PCI: 15:10.4
+assign_stack_resources:377 dev: PCI: 15:10.5
+assign_stack_resources:377 dev: PCI: 15:10.6
+assign_stack_resources:377 dev: PCI: 15:10.7
+assign_stack_resources:377 dev: PCI: 15:11.0
+assign_stack_resources:377 dev: PCI: 15:11.1
+assign_stack_resources:377 dev: PCI: 15:11.2
+assign_stack_resources:377 dev: PCI: 15:11.3
+assign_stack_resources:377 dev: PCI: 15:14.0
+assign_stack_resources:377 dev: PCI: 15:14.1
+assign_stack_resources:377 dev: PCI: 15:14.2
+assign_stack_resources:377 dev: PCI: 15:14.3
+assign_stack_resources:377 dev: PCI: 15:14.4
+assign_stack_resources:377 dev: PCI: 15:14.5
+assign_stack_resources:377 dev: PCI: 15:14.6
+assign_stack_resources:377 dev: PCI: 15:14.7
+assign_stack_resources:377 dev: PCI: 15:15.0
+assign_stack_resources:377 dev: PCI: 15:15.1
+assign_stack_resources:377 dev: PCI: 15:15.2
+assign_stack_resources:377 dev: PCI: 15:15.3
+assign_stack_resources:377 dev: PCI: 15:15.4
+assign_stack_resources:377 dev: PCI: 15:15.5
+assign_stack_resources:377 dev: PCI: 15:15.6
+assign_stack_resources:377 dev: PCI: 15:15.7
+assign_stack_resources:377 dev: PCI: 15:16.0
+assign_stack_resources:377 dev: PCI: 15:16.1
+assign_stack_resources:377 dev: PCI: 15:16.2
+assign_stack_resources:377 dev: PCI: 15:16.3
+assign_stack_resources:377 dev: PCI: 15:16.4
+assign_stack_resources:377 dev: PCI: 15:16.5
+assign_stack_resources:377 dev: PCI: 15:16.6
+assign_stack_resources:377 dev: PCI: 15:16.7
+assign_stack_resources:377 dev: PCI: 15:17.0
+assign_stack_resources:377 dev: PCI: 15:17.1
+assign_stack_resources:377 dev: PCI: 15:17.2
+assign_stack_resources:377 dev: PCI: 15:17.3
+assign_stack_resources:377 dev: PCI: 15:1d.0
+assign_stack_resources:377 dev: PCI: 15:1d.1
+assign_stack_resources:377 dev: PCI: 15:1d.2
+assign_stack_resources:377 dev: PCI: 15:1d.3
+assign_stack_resources:377 dev: PCI: 15:1e.0
+assign_stack_resources:377 dev: PCI: 15:1e.1
+assign_stack_resources:377 dev: PCI: 15:1e.2
+assign_stack_resources:377 dev: PCI: 15:1e.3
+assign_stack_resources:377 dev: PCI: 15:1e.4
+assign_stack_resources:377 dev: PCI: 15:1e.5
+assign_stack_resources:377 dev: PCI: 15:1e.6
+assign_stack_resources:377 dev: PCI: 15:1f.0
+assign_stack_resources:377 dev: PCI: 15:1f.1
+assign_stack_resources:377 dev: PCI: 15:1f.2
+assign_stack_resources:377 dev: PCI: 15:1f.3
+assign_stack_resources:377 dev: PCI: 15:1f.4
+assign_stack_resources:377 dev: PCI: 15:1f.5
+assign_stack_resources:377 dev: PCI: 15:1f.6
+assign_stack_resources:377 dev: PCI: 15:1f.7
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+get_res_type:37 flags: 0x81202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+get_res_type:37 flags: 0x81202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+get_res_type:37 flags: 0x81202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+get_res_type:37 flags: 0x81202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 3
+assign_stack_resources:373 rt: 0
+assign_stack_resources:377 dev: PCI: 63:00.0
+assign_stack_resources:383 dev: PCI: 63:00.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 63:00.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 63:00.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 63:01.0
+assign_stack_resources:383 dev: PCI: 63:01.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 63:01.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 63:01.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 63:02.0
+assign_stack_resources:383 dev: PCI: 63:02.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 63:02.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 63:02.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 63:03.0
+assign_stack_resources:383 dev: PCI: 63:03.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 63:03.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 63:03.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 63:05.0
+assign_stack_resources:377 dev: PCI: 63:05.2
+assign_stack_resources:377 dev: PCI: 63:05.6
+assign_stack_resources:377 dev: PCI: 63:07.0
+assign_stack_resources:377 dev: PCI: 63:07.1
+assign_stack_resources:377 dev: PCI: 63:07.2
+assign_stack_resources:377 dev: PCI: 63:07.3
+assign_stack_resources:377 dev: PCI: 63:07.4
+assign_stack_resources:377 dev: PCI: 63:07.7
+assign_stack_resources:377 dev: PCI: 63:08.0
+assign_stack_resources:377 dev: PCI: 63:08.1
+assign_stack_resources:377 dev: PCI: 63:09.0
+assign_stack_resources:377 dev: PCI: 63:09.1
+assign_stack_resources:377 dev: PCI: 63:0a.0
+assign_stack_resources:377 dev: PCI: 63:0a.1
+assign_stack_resources:377 dev: PCI: 63:0a.2
+assign_stack_resources:377 dev: PCI: 63:0a.3
+assign_stack_resources:377 dev: PCI: 63:0a.4
+assign_stack_resources:377 dev: PCI: 63:0a.5
+assign_stack_resources:377 dev: PCI: 63:0a.6
+assign_stack_resources:377 dev: PCI: 63:0a.7
+assign_stack_resources:377 dev: PCI: 63:0b.0
+assign_stack_resources:377 dev: PCI: 63:0b.1
+assign_stack_resources:377 dev: PCI: 63:0b.2
+assign_stack_resources:377 dev: PCI: 63:0b.3
+assign_stack_resources:377 dev: PCI: 63:0c.0
+assign_stack_resources:377 dev: PCI: 63:0c.1
+assign_stack_resources:377 dev: PCI: 63:0c.2
+assign_stack_resources:377 dev: PCI: 63:0c.3
+assign_stack_resources:377 dev: PCI: 63:0c.4
+assign_stack_resources:377 dev: PCI: 63:0c.5
+assign_stack_resources:377 dev: PCI: 63:0c.6
+assign_stack_resources:377 dev: PCI: 63:0c.7
+assign_stack_resources:377 dev: PCI: 63:0d.0
+assign_stack_resources:377 dev: PCI: 63:0d.1
+assign_stack_resources:377 dev: PCI: 63:0d.2
+assign_stack_resources:377 dev: PCI: 63:0d.3
+assign_stack_resources:373 rt: 1
+assign_stack_resources:377 dev: PCI: 63:00.0
+assign_stack_resources:383 dev: PCI: 63:00.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 63:00.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 63:00.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 63:01.0
+assign_stack_resources:383 dev: PCI: 63:01.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 63:01.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 63:01.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 63:02.0
+assign_stack_resources:383 dev: PCI: 63:02.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 63:02.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 63:02.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 63:03.0
+assign_stack_resources:383 dev: PCI: 63:03.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 63:03.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 63:03.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 63:05.0
+assign_stack_resources:377 dev: PCI: 63:05.2
+assign_stack_resources:377 dev: PCI: 63:05.6
+assign_stack_resources:377 dev: PCI: 63:07.0
+assign_stack_resources:377 dev: PCI: 63:07.1
+assign_stack_resources:377 dev: PCI: 63:07.2
+assign_stack_resources:377 dev: PCI: 63:07.3
+assign_stack_resources:377 dev: PCI: 63:07.4
+assign_stack_resources:377 dev: PCI: 63:07.7
+assign_stack_resources:377 dev: PCI: 63:08.0
+assign_stack_resources:377 dev: PCI: 63:08.1
+assign_stack_resources:377 dev: PCI: 63:09.0
+assign_stack_resources:377 dev: PCI: 63:09.1
+assign_stack_resources:377 dev: PCI: 63:0a.0
+assign_stack_resources:377 dev: PCI: 63:0a.1
+assign_stack_resources:377 dev: PCI: 63:0a.2
+assign_stack_resources:377 dev: PCI: 63:0a.3
+assign_stack_resources:377 dev: PCI: 63:0a.4
+assign_stack_resources:377 dev: PCI: 63:0a.5
+assign_stack_resources:377 dev: PCI: 63:0a.6
+assign_stack_resources:377 dev: PCI: 63:0a.7
+assign_stack_resources:377 dev: PCI: 63:0b.0
+assign_stack_resources:377 dev: PCI: 63:0b.1
+assign_stack_resources:377 dev: PCI: 63:0b.2
+assign_stack_resources:377 dev: PCI: 63:0b.3
+assign_stack_resources:377 dev: PCI: 63:0c.0
+assign_stack_resources:377 dev: PCI: 63:0c.1
+assign_stack_resources:377 dev: PCI: 63:0c.2
+assign_stack_resources:377 dev: PCI: 63:0c.3
+assign_stack_resources:377 dev: PCI: 63:0c.4
+assign_stack_resources:377 dev: PCI: 63:0c.5
+assign_stack_resources:377 dev: PCI: 63:0c.6
+assign_stack_resources:377 dev: PCI: 63:0c.7
+assign_stack_resources:377 dev: PCI: 63:0d.0
+assign_stack_resources:377 dev: PCI: 63:0d.1
+assign_stack_resources:377 dev: PCI: 63:0d.2
+assign_stack_resources:377 dev: PCI: 63:0d.3
+assign_stack_resources:373 rt: 2
+assign_stack_resources:377 dev: PCI: 63:00.0
+assign_stack_resources:383 dev: PCI: 63:00.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 63:00.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 63:00.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 63:01.0
+assign_stack_resources:383 dev: PCI: 63:01.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 63:01.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 63:01.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 63:02.0
+assign_stack_resources:383 dev: PCI: 63:02.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 63:02.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 63:02.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 63:03.0
+assign_stack_resources:383 dev: PCI: 63:03.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: 63:03.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: 63:03.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: 63:05.0
+assign_stack_resources:377 dev: PCI: 63:05.2
+assign_stack_resources:377 dev: PCI: 63:05.6
+assign_stack_resources:377 dev: PCI: 63:07.0
+assign_stack_resources:377 dev: PCI: 63:07.1
+assign_stack_resources:377 dev: PCI: 63:07.2
+assign_stack_resources:377 dev: PCI: 63:07.3
+assign_stack_resources:377 dev: PCI: 63:07.4
+assign_stack_resources:377 dev: PCI: 63:07.7
+assign_stack_resources:377 dev: PCI: 63:08.0
+assign_stack_resources:377 dev: PCI: 63:08.1
+assign_stack_resources:377 dev: PCI: 63:09.0
+assign_stack_resources:377 dev: PCI: 63:09.1
+assign_stack_resources:377 dev: PCI: 63:0a.0
+assign_stack_resources:377 dev: PCI: 63:0a.1
+assign_stack_resources:377 dev: PCI: 63:0a.2
+assign_stack_resources:377 dev: PCI: 63:0a.3
+assign_stack_resources:377 dev: PCI: 63:0a.4
+assign_stack_resources:377 dev: PCI: 63:0a.5
+assign_stack_resources:377 dev: PCI: 63:0a.6
+assign_stack_resources:377 dev: PCI: 63:0a.7
+assign_stack_resources:377 dev: PCI: 63:0b.0
+assign_stack_resources:377 dev: PCI: 63:0b.1
+assign_stack_resources:377 dev: PCI: 63:0b.2
+assign_stack_resources:377 dev: PCI: 63:0b.3
+assign_stack_resources:377 dev: PCI: 63:0c.0
+assign_stack_resources:377 dev: PCI: 63:0c.1
+assign_stack_resources:377 dev: PCI: 63:0c.2
+assign_stack_resources:377 dev: PCI: 63:0c.3
+assign_stack_resources:377 dev: PCI: 63:0c.4
+assign_stack_resources:377 dev: PCI: 63:0c.5
+assign_stack_resources:377 dev: PCI: 63:0c.6
+assign_stack_resources:377 dev: PCI: 63:0c.7
+assign_stack_resources:377 dev: PCI: 63:0d.0
+assign_stack_resources:377 dev: PCI: 63:0d.1
+assign_stack_resources:377 dev: PCI: 63:0d.2
+assign_stack_resources:377 dev: PCI: 63:0d.3
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+get_res_type:37 flags: 0x81202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+get_res_type:37 flags: 0x81202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:377 dev: PCI: b5:00.0
+assign_stack_resources:383 dev: PCI: b5:00.0, flags: 0x1201
+get_res_type:37 flags: 0x1201
+assign_stack_resources:383 dev: PCI: b5:00.0, flags: 0x1201
+get_res_type:37 flags: 0x1201
+assign_stack_resources:377 dev: PCI: b5:00.1
+assign_stack_resources:383 dev: PCI: b5:00.1, flags: 0x1201
+get_res_type:37 flags: 0x1201
+assign_stack_resources:383 dev: PCI: b5:00.1, flags: 0x1201
+get_res_type:37 flags: 0x1201
+get_res_type:37 flags: 0x81202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:377 dev: PCI: b5:00.0
+assign_stack_resources:383 dev: PCI: b5:00.0, flags: 0x1201
+get_res_type:37 flags: 0x1201
+assign_stack_resources:383 dev: PCI: b5:00.0, flags: 0x1201
+get_res_type:37 flags: 0x1201
+assign_stack_resources:377 dev: PCI: b5:00.1
+assign_stack_resources:383 dev: PCI: b5:00.1, flags: 0x1201
+get_res_type:37 flags: 0x1201
+assign_stack_resources:383 dev: PCI: b5:00.1, flags: 0x1201
+get_res_type:37 flags: 0x1201
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:377 dev: PCI: b5:00.0
+assign_stack_resources:383 dev: PCI: b5:00.0, flags: 0x40001201
+get_res_type:37 flags: 0x40001201
+assign_stack_resources:383 dev: PCI: b5:00.0, flags: 0x40001201
+get_res_type:37 flags: 0x40001201
+assign_stack_resources:377 dev: PCI: b5:00.1
+assign_stack_resources:383 dev: PCI: b5:00.1, flags: 0x40001201
+get_res_type:37 flags: 0x40001201
+assign_stack_resources:383 dev: PCI: b5:00.1, flags: 0x40001201
+get_res_type:37 flags: 0x40001201
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+get_res_type:37 flags: 0x81202
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 1
+assign_stack_resources:373 rt: 0
+assign_stack_resources:367 no_res_types: 3
+assign_stack_resources:373 rt: 0
+assign_stack_resources:377 dev: PCI: b2:00.0
+assign_stack_resources:383 dev: PCI: b2:00.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: b2:00.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: b2:00.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: b2:01.0
+assign_stack_resources:383 dev: PCI: b2:01.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: b2:01.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: b2:01.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: b2:02.0
+assign_stack_resources:383 dev: PCI: b2:02.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: b2:02.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: b2:02.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: b2:03.0
+assign_stack_resources:383 dev: PCI: b2:03.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: b2:03.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: b2:03.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: b2:05.0
+assign_stack_resources:377 dev: PCI: b2:05.2
+assign_stack_resources:377 dev: PCI: b2:05.6
+assign_stack_resources:377 dev: PCI: b2:07.0
+assign_stack_resources:377 dev: PCI: b2:07.1
+assign_stack_resources:377 dev: PCI: b2:07.2
+assign_stack_resources:377 dev: PCI: b2:07.3
+assign_stack_resources:377 dev: PCI: b2:07.4
+assign_stack_resources:377 dev: PCI: b2:07.7
+assign_stack_resources:373 rt: 1
+assign_stack_resources:377 dev: PCI: b2:00.0
+assign_stack_resources:383 dev: PCI: b2:00.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: b2:00.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: b2:00.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: b2:01.0
+assign_stack_resources:383 dev: PCI: b2:01.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: b2:01.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: b2:01.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: b2:02.0
+assign_stack_resources:383 dev: PCI: b2:02.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: b2:02.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: b2:02.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: b2:03.0
+assign_stack_resources:383 dev: PCI: b2:03.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: b2:03.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: b2:03.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: b2:05.0
+assign_stack_resources:377 dev: PCI: b2:05.2
+assign_stack_resources:377 dev: PCI: b2:05.6
+assign_stack_resources:377 dev: PCI: b2:07.0
+assign_stack_resources:377 dev: PCI: b2:07.1
+assign_stack_resources:377 dev: PCI: b2:07.2
+assign_stack_resources:377 dev: PCI: b2:07.3
+assign_stack_resources:377 dev: PCI: b2:07.4
+assign_stack_resources:377 dev: PCI: b2:07.7
+assign_stack_resources:373 rt: 2
+assign_stack_resources:377 dev: PCI: b2:00.0
+assign_stack_resources:383 dev: PCI: b2:00.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: b2:00.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: b2:00.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: b2:01.0
+assign_stack_resources:383 dev: PCI: b2:01.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: b2:01.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: b2:01.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: b2:02.0
+assign_stack_resources:383 dev: PCI: b2:02.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: b2:02.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: b2:02.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: b2:03.0
+assign_stack_resources:383 dev: PCI: b2:03.0, flags: 0x40080102
+assign_stack_resources:383 dev: PCI: b2:03.0, flags: 0x40081202
+get_res_type:37 flags: 0x40081202
+assign_stack_resources:383 dev: PCI: b2:03.0, flags: 0x40080202
+assign_stack_resources:377 dev: PCI: b2:05.0
+assign_stack_resources:377 dev: PCI: b2:05.2
+assign_stack_resources:377 dev: PCI: b2:05.6
+assign_stack_resources:377 dev: PCI: b2:07.0
+assign_stack_resources:377 dev: PCI: b2:07.1
+assign_stack_resources:377 dev: PCI: b2:07.2
+assign_stack_resources:377 dev: PCI: b2:07.3
+assign_stack_resources:377 dev: PCI: b2:07.4
+assign_stack_resources:377 dev: PCI: b2:07.7
+PCI: 00:04.0 10 <- [0x0094210000 - 0x0094213fff] size 0x00004000 gran 0x0e mem64
+PCI: 00:04.1 10 <- [0x0094214000 - 0x0094217fff] size 0x00004000 gran 0x0e mem64
+PCI: 00:04.2 10 <- [0x0094218000 - 0x009421bfff] size 0x00004000 gran 0x0e mem64
+PCI: 00:04.3 10 <- [0x009421c000 - 0x009421ffff] size 0x00004000 gran 0x0e mem64
+PCI: 00:04.4 10 <- [0x0094220000 - 0x0094223fff] size 0x00004000 gran 0x0e mem64
+PCI: 00:04.5 10 <- [0x0094224000 - 0x0094227fff] size 0x00004000 gran 0x0e mem64
+PCI: 00:04.6 10 <- [0x0094228000 - 0x009422bfff] size 0x00004000 gran 0x0e mem64
+PCI: 00:04.7 10 <- [0x009422c000 - 0x009422ffff] size 0x00004000 gran 0x0e mem64
+PCI: 00:11.5 10 <- [0x0094234000 - 0x0094235fff] size 0x00002000 gran 0x0d mem
+PCI: 00:11.5 14 <- [0x0094238000 - 0x00942380ff] size 0x00000100 gran 0x08 mem
+PCI: 00:11.5 18 <- [0x0000003040 - 0x0000003047] size 0x00000008 gran 0x03 io
+PCI: 00:11.5 1c <- [0x0000003050 - 0x0000003053] size 0x00000004 gran 0x02 io
+PCI: 00:11.5 20 <- [0x0000003000 - 0x000000301f] size 0x00000020 gran 0x05 io
+PCI: 00:11.5 24 <- [0x0094100000 - 0x009417ffff] size 0x00080000 gran 0x13 mem
+PCI: 00:14.0 10 <- [0x0094200000 - 0x009420ffff] size 0x00010000 gran 0x10 mem64
+PCI: 00:16.0 10 <- [0x0094239000 - 0x0094239fff] size 0x00001000 gran 0x0c mem64
+PCI: 00:16.4 10 <- [0x009423a000 - 0x009423afff] size 0x00001000 gran 0x0c mem64
+PCI: 00:17.0 10 <- [0x0094236000 - 0x0094237fff] size 0x00002000 gran 0x0d mem
+PCI: 00:17.0 14 <- [0x009423b000 - 0x009423b0ff] size 0x00000100 gran 0x08 mem
+PCI: 00:17.0 18 <- [0x0000003048 - 0x000000304f] size 0x00000008 gran 0x03 io
+PCI: 00:17.0 1c <- [0x0000003054 - 0x0000003057] size 0x00000004 gran 0x02 io
+PCI: 00:17.0 20 <- [0x0000003020 - 0x000000303f] size 0x00000020 gran 0x05 io
+PCI: 00:17.0 24 <- [0x0094180000 - 0x00941fffff] size 0x00080000 gran 0x13 mem
+PCI: 00:1c.0 1c <- [0x0000001000 - 0x0000001fff] size 0x00001000 gran 0x0c bus 01 io
+PCI: 00:1c.0 24 <- [0x200000000000 - 0x2000000fffff] size 0x00100000 gran 0x14 bus 01 prefmem
+PCI: 00:1c.0 20 <- [0x0090000000 - 0x0093ffffff] size 0x04000000 gran 0x14 bus 01 mem
+PCI: 01:00.0 1c <- [0x0000001000 - 0x0000001fff] size 0x00001000 gran 0x0c bus 02 io
+PCI: 01:00.0 24 <- [0x200000000000 - 0x2000000fffff] size 0x00100000 gran 0x14 bus 02 prefmem
+PCI: 01:00.0 20 <- [0x0090000000 - 0x0093ffffff] size 0x04000000 gran 0x14 bus 02 mem
+PCI: 02:00.0 10 <- [0x0090000000 - 0x0091ffffff] size 0x02000000 gran 0x19 mem
+PCI: 02:00.0 14 <- [0x0092040000 - 0x009205ffff] size 0x00020000 gran 0x11 mem
+PCI: 02:00.0 18 <- [0x0000001400 - 0x000000147f] size 0x00000080 gran 0x07 io
+PCI: 02:01.0 10 <- [0x0092000000 - 0x009203ffff] size 0x00040000 gran 0x12 mem
+PCI: 02:01.0 14 <- [0x0000001000 - 0x00000013ff] size 0x00000400 gran 0x0a io
+PCI: 00:1c.4 1c <- [0x0000002000 - 0x0000002fff] size 0x00001000 gran 0x0c bus 03 io
+PCI: 00:1c.4 24 <- [0x200000100000 - 0x2000001fffff] size 0x00100000 gran 0x14 bus 03 prefmem
+PCI: 00:1c.4 20 <- [0x0094000000 - 0x00940fffff] size 0x00100000 gran 0x14 bus 03 mem
+PCI: 00:1f.2 10 <- [0x0094230000 - 0x0094233fff] size 0x00004000 gran 0x0e mem
+PCI: 00:1f.4 10 <- [0x009423c000 - 0x009423c0ff] size 0x00000100 gran 0x08 mem64
+PCI: 00:1f.5 10 <- [0x009423d000 - 0x009423dfff] size 0x00001000 gran 0x0c mem
+PNP: 002e.2 60 <- [0x00000003f8 - 0x00000003ff] size 0x00000008 gran 0x03 io
+PNP: 002e.2 70 <- [0x0000000004 - 0x0000000004] size 0x00000001 gran 0x00 irq
+PNP: 002e.2 f0 irq size: 0x0000000001 not assigned in devicetree
+PNP: 002e.3 60 <- [0x00000002f8 - 0x00000002ff] size 0x00000008 gran 0x03 io
+PNP: 002e.3 70 <- [0x0000000003 - 0x0000000003] size 0x00000001 gran 0x00 irq
+PNP: 002e.3 f0 irq size: 0x0000000001 not assigned in devicetree
+PNP: 002e.4 60 io size: 0x0000000008 not assigned in devicetree
+PNP: 002e.4 62 io size: 0x0000000008 not assigned in devicetree
+PNP: 002e.4 64 io size: 0x0000000008 not assigned in devicetree
+PNP: 002e.4 66 io size: 0x0000000008 not assigned in devicetree
+PNP: 002e.4 70 irq size: 0x0000000001 not assigned in devicetree
+PNP: 002e.5 60 io size: 0x0000000001 not assigned in devicetree
+PNP: 002e.5 62 io size: 0x0000000001 not assigned in devicetree
+PNP: 002e.5 70 irq size: 0x0000000001 not assigned in devicetree
+PNP: 002e.5 72 irq size: 0x0000000001 not assigned in devicetree
+PNP: 002e.5 f0 irq size: 0x0000000001 not assigned in devicetree
+PNP: 002e.7 70 irq size: 0x0000000001 not assigned in devicetree
+PNP: 002e.d 70 irq size: 0x0000000001 not assigned in devicetree
+PNP: 002e.e 60 io size: 0x0000000002 not assigned in devicetree
+PNP: 002e.e 70 irq size: 0x0000000001 not assigned in devicetree
+PNP: 002e.0 00 <- [0x000000002e - 0x000000002f] size 0x00000002 gran 0x00 io
+LPC: enabling default decode range LPC_IOE_SUPERIO_2E_2F
+LPC: enabling default decode range LPC_IOE_COMA_EN
+LPC: enabling default decode range LPC_IOE_COMB_EN
+LPC IO decode base 0!
+LPC IO decode base 0!
+LPC IO decode base 0!
+LPC IO decode base 0!
+LPC IO decode base 0!
+LPC IO decode base 0!
+LPC IO decode base 0!
+PCI: 15:00.0 1c <- [0x0000005000 - 0x0000005fff] size 0x00001000 gran 0x0c bus 16 io
+PCI: 15:00.0 24 <- [0x201000000000 - 0x2010000fffff] size 0x00100000 gran 0x14 bus 16 prefmem
+PCI: 15:00.0 20 <- [0x00ab000000 - 0x00ab0fffff] size 0x00100000 gran 0x14 bus 16 mem
+PCI: 15:01.0 1c <- [0x0000006000 - 0x0000006fff] size 0x00001000 gran 0x0c bus 17 io
+PCI: 15:01.0 24 <- [0x201000100000 - 0x2010001fffff] size 0x00100000 gran 0x14 bus 17 prefmem
+PCI: 15:01.0 20 <- [0x00ab100000 - 0x00ab1fffff] size 0x00100000 gran 0x14 bus 17 mem
+PCI: 15:02.0 1c <- [0x0000007000 - 0x0000007fff] size 0x00001000 gran 0x0c bus 18 io
+PCI: 15:02.0 24 <- [0x201000200000 - 0x2010002fffff] size 0x00100000 gran 0x14 bus 18 prefmem
+PCI: 15:02.0 20 <- [0x00ab200000 - 0x00ab2fffff] size 0x00100000 gran 0x14 bus 18 mem
+PCI: 15:03.0 1c <- [0x0000008000 - 0x0000008fff] size 0x00001000 gran 0x0c bus 19 io
+PCI: 15:03.0 24 <- [0x201000300000 - 0x2010003fffff] size 0x00100000 gran 0x14 bus 19 prefmem
+PCI: 15:03.0 20 <- [0x00ab300000 - 0x00ab3fffff] size 0x00100000 gran 0x14 bus 19 mem
+PCI: 63:00.0 1c <- [0x0000009000 - 0x0000009fff] size 0x00001000 gran 0x0c bus 64 io
+PCI: 63:00.0 24 <- [0x202000000000 - 0x2020000fffff] size 0x00100000 gran 0x14 bus 64 prefmem
+PCI: 63:00.0 20 <- [0x00c6000000 - 0x00c60fffff] size 0x00100000 gran 0x14 bus 64 mem
+PCI: 63:01.0 1c <- [0x000000a000 - 0x000000afff] size 0x00001000 gran 0x0c bus 65 io
+PCI: 63:01.0 24 <- [0x202000100000 - 0x2020001fffff] size 0x00100000 gran 0x14 bus 65 prefmem
+PCI: 63:01.0 20 <- [0x00c6100000 - 0x00c61fffff] size 0x00100000 gran 0x14 bus 65 mem
+PCI: 63:02.0 1c <- [0x000000b000 - 0x000000bfff] size 0x00001000 gran 0x0c bus 66 io
+PCI: 63:02.0 24 <- [0x202000200000 - 0x2020002fffff] size 0x00100000 gran 0x14 bus 66 prefmem
+PCI: 63:02.0 20 <- [0x00c6200000 - 0x00c62fffff] size 0x00100000 gran 0x14 bus 66 mem
+PCI: 63:03.0 1c <- [0x000000c000 - 0x000000cfff] size 0x00001000 gran 0x0c bus 67 io
+PCI: 63:03.0 24 <- [0x202000300000 - 0x2020003fffff] size 0x00100000 gran 0x14 bus 67 prefmem
+PCI: 63:03.0 20 <- [0x00c6300000 - 0x00c63fffff] size 0x00100000 gran 0x14 bus 67 mem
+PCI: b2:00.0 1c <- [0x000000d000 - 0x000000dfff] size 0x00001000 gran 0x0c bus b3 io
+PCI: b2:00.0 24 <- [0x203000000000 - 0x2030000fffff] size 0x00100000 gran 0x14 bus b3 prefmem
+PCI: b2:00.0 20 <- [0x00e1000000 - 0x00e10fffff] size 0x00100000 gran 0x14 bus b3 mem
+PCI: b2:01.0 1c <- [0x000000e000 - 0x000000efff] size 0x00001000 gran 0x0c bus b4 io
+PCI: b2:01.0 24 <- [0x203000100000 - 0x2030001fffff] size 0x00100000 gran 0x14 bus b4 prefmem
+PCI: b2:01.0 20 <- [0x00e1100000 - 0x00e11fffff] size 0x00100000 gran 0x14 bus b4 mem
+PCI: b2:02.0 1c <- [0x000000f000 - 0x000000ffff] size 0x00001000 gran 0x0c bus b5 io
+PCI: b2:02.0 24 <- [0x203000200000 - 0x2030007fffff] size 0x00600000 gran 0x14 bus b5 prefmem
+PCI: b2:02.0 20 <- [0x00e1200000 - 0x00e12fffff] size 0x00100000 gran 0x14 bus b5 mem
+PCI: b5:00.0 10 <- [0x203000200000 - 0x2030003fffff] size 0x00200000 gran 0x15 prefmem64
+PCI: b5:00.0 20 <- [0x203000600000 - 0x203000603fff] size 0x00004000 gran 0x0e prefmem64
+PCI: b5:00.1 10 <- [0x203000400000 - 0x2030005fffff] size 0x00200000 gran 0x15 prefmem64
+PCI: b5:00.1 20 <- [0x203000604000 - 0x203000607fff] size 0x00004000 gran 0x0e prefmem64
+PCI: b2:03.0 1c <- [0x0000000000 - 0x0000000fff] size 0x00001000 gran 0x0c bus b6 io
+PCI: b2:03.0 24 <- [0x203000800000 - 0x2030008fffff] size 0x00100000 gran 0x14 bus b6 prefmem
+PCI: b2:03.0 20 <- [0x00e1300000 - 0x00e13fffff] size 0x00100000 gran 0x14 bus b6 mem
+Done setting resources.
+Done allocating resources.
+BS: BS_DEV_RESOURCES run times (exec / console): 8 / 5992 ms
+Enabling resources...
+PCI: 00:00.0 subsystem <- 8086/2020
+PCI: 00:00.0 cmd <- 400
+PCI: 00:04.0 subsystem <- 8086/2021
+PCI: 00:04.0 cmd <- 06
+PCI: 00:04.1 subsystem <- 8086/2021
+PCI: 00:04.1 cmd <- 06
+PCI: 00:04.2 subsystem <- 8086/2021
+PCI: 00:04.2 cmd <- 06
+PCI: 00:04.3 subsystem <- 8086/2021
+PCI: 00:04.3 cmd <- 06
+PCI: 00:04.4 subsystem <- 8086/2021
+PCI: 00:04.4 cmd <- 06
+PCI: 00:04.5 subsystem <- 8086/2021
+PCI: 00:04.5 cmd <- 06
+PCI: 00:04.6 subsystem <- 8086/2021
+PCI: 00:04.6 cmd <- 06
+PCI: 00:04.7 subsystem <- 8086/2021
+PCI: 00:04.7 cmd <- 06
+PCI: 00:05.0 subsystem <- 8086/2024
+PCI: 00:05.0 cmd <- 04
+PCI: 00:05.2 subsystem <- 8086/2025
+PCI: 00:05.2 cmd <- 04
+PCI: 00:08.0 subsystem <- 8086/2014
+PCI: 00:08.0 cmd <- 04
+PCI: 00:08.1 subsystem <- 8086/2015
+PCI: 00:08.1 cmd <- 00
+PCI: 00:08.2 subsystem <- 8086/2016
+PCI: 00:08.2 cmd <- 04
+PCI: 00:11.0 subsystem <- 8086/a1ec
+PCI: 00:11.0 cmd <- 00
+PCI: 00:11.5 subsystem <- 8086/a1d2
+PCI: 00:11.5 cmd <- 03
+PCI: 00:14.0 subsystem <- 8086/a1af
+PCI: 00:14.0 cmd <- 142
+PCI: 00:16.0 subsystem <- 8086/a1ba
+PCI: 00:16.0 cmd <- 06
+PCI: 00:16.4 subsystem <- 8086/a1be
+PCI: 00:16.4 cmd <- 02
+PCI: 00:17.0 subsystem <- 8086/a182
+PCI: 00:17.0 cmd <- 03
+PCI: 00:1c.0 bridge ctrl <- 001b
+PCI: 00:1c.0 cmd <- 07
+PCI: 00:1c.4 bridge ctrl <- 0013
+PCI: 00:1c.4 cmd <- 07
+PCI: 00:1f.2 subsystem <- 8086/a1a1
+PCI: 00:1f.2 cmd <- 06
+PCI: 00:1f.4 subsystem <- 8086/a1a3
+PCI: 00:1f.4 cmd <- 03
+PCI: 00:1f.5 subsystem <- 8086/a1a4
+PCI: 00:1f.5 cmd <- 406
+PCI: 00:1f.0 subsystem <- 8086/a1cb
+PCI: 00:1f.0 cmd <- 403
+PCI: 01:00.0 bridge ctrl <- 001b
+PCI: 01:00.0 cmd <- 07
+PCI: 02:00.0 cmd <- 03
+PCI: 02:01.0 cmd <- 03
+PCI: 15:00.0 bridge ctrl <- 0013
+PCI: 15:00.0 cmd <- 407
+PCI: 15:01.0 bridge ctrl <- 0013
+PCI: 15:01.0 cmd <- 07
+PCI: 15:02.0 bridge ctrl <- 0013
+PCI: 15:02.0 cmd <- 07
+PCI: 15:03.0 bridge ctrl <- 0013
+PCI: 15:03.0 cmd <- 07
+PCI: 15:05.0 cmd <- 04
+PCI: 15:05.2 cmd <- 04
+PCI: 15:05.6 cmd <- 00
+PCI: 15:07.0 cmd <- 04
+PCI: 15:07.1 cmd <- 04
+PCI: 15:07.2 cmd <- 04
+PCI: 15:07.3 cmd <- 04
+PCI: 15:07.4 cmd <- 04
+PCI: 15:07.7 cmd <- 04
+PCI: 15:08.0 cmd <- 04
+PCI: 15:08.1 cmd <- 04
+PCI: 15:08.2 cmd <- 04
+PCI: 15:08.3 cmd <- 04
+PCI: 15:08.4 cmd <- 04
+PCI: 15:08.5 cmd <- 04
+PCI: 15:08.6 cmd <- 04
+PCI: 15:08.7 cmd <- 04
+PCI: 15:09.0 cmd <- 04
+PCI: 15:09.1 cmd <- 04
+PCI: 15:09.2 cmd <- 04
+PCI: 15:09.3 cmd <- 04
+PCI: 15:09.4 cmd <- 04
+PCI: 15:09.5 cmd <- 04
+PCI: 15:09.6 cmd <- 04
+PCI: 15:09.7 cmd <- 04
+PCI: 15:0a.0 cmd <- 04
+PCI: 15:0a.1 cmd <- 04
+PCI: 15:0a.2 cmd <- 04
+PCI: 15:0a.3 cmd <- 04
+PCI: 15:0a.4 cmd <- 04
+PCI: 15:0a.5 cmd <- 04
+PCI: 15:0a.6 cmd <- 04
+PCI: 15:0a.7 cmd <- 04
+PCI: 15:0b.0 cmd <- 04
+PCI: 15:0b.1 cmd <- 04
+PCI: 15:0b.2 cmd <- 04
+PCI: 15:0b.3 cmd <- 04
+PCI: 15:0e.0 cmd <- 04
+PCI: 15:0e.1 cmd <- 04
+PCI: 15:0e.2 cmd <- 04
+PCI: 15:0e.3 cmd <- 04
+PCI: 15:0e.4 cmd <- 04
+PCI: 15:0e.5 cmd <- 04
+PCI: 15:0e.6 cmd <- 04
+PCI: 15:0e.7 cmd <- 04
+PCI: 15:0f.0 cmd <- 04
+PCI: 15:0f.1 cmd <- 04
+PCI: 15:0f.2 cmd <- 04
+PCI: 15:0f.3 cmd <- 04
+PCI: 15:0f.4 cmd <- 04
+PCI: 15:0f.5 cmd <- 04
+PCI: 15:0f.6 cmd <- 04
+PCI: 15:0f.7 cmd <- 04
+PCI: 15:10.0 cmd <- 04
+PCI: 15:10.1 cmd <- 04
+PCI: 15:10.2 cmd <- 04
+PCI: 15:10.3 cmd <- 04
+PCI: 15:10.4 cmd <- 04
+PCI: 15:10.5 cmd <- 04
+PCI: 15:10.6 cmd <- 04
+PCI: 15:10.7 cmd <- 04
+PCI: 15:11.0 cmd <- 04
+PCI: 15:11.1 cmd <- 04
+PCI: 15:11.2 cmd <- 04
+PCI: 15:11.3 cmd <- 04
+PCI: 15:14.0 cmd <- 04
+PCI: 15:14.1 cmd <- 04
+PCI: 15:14.2 cmd <- 04
+PCI: 15:14.3 cmd <- 04
+PCI: 15:14.4 cmd <- 04
+PCI: 15:14.5 cmd <- 04
+PCI: 15:14.6 cmd <- 04
+PCI: 15:14.7 cmd <- 04
+PCI: 15:15.0 cmd <- 04
+PCI: 15:15.1 cmd <- 04
+PCI: 15:15.2 cmd <- 04
+PCI: 15:15.3 cmd <- 04
+PCI: 15:15.4 cmd <- 04
+PCI: 15:15.5 cmd <- 04
+PCI: 15:15.6 cmd <- 04
+PCI: 15:15.7 cmd <- 04
+PCI: 15:16.0 cmd <- 04
+PCI: 15:16.1 cmd <- 04
+PCI: 15:16.2 cmd <- 04
+PCI: 15:16.3 cmd <- 04
+PCI: 15:16.4 cmd <- 04
+PCI: 15:16.5 cmd <- 04
+PCI: 15:16.6 cmd <- 04
+PCI: 15:16.7 cmd <- 04
+PCI: 15:17.0 cmd <- 04
+PCI: 15:17.1 cmd <- 04
+PCI: 15:17.2 cmd <- 04
+PCI: 15:17.3 cmd <- 04
+PCI: 15:1d.0 cmd <- 04
+PCI: 15:1d.1 cmd <- 04
+PCI: 15:1d.2 cmd <- 04
+PCI: 15:1d.3 cmd <- 04
+PCI: 15:1e.0 cmd <- 04
+PCI: 15:1e.1 cmd <- 04
+PCI: 15:1e.2 cmd <- 04
+PCI: 15:1e.3 cmd <- 04
+PCI: 15:1e.4 cmd <- 04
+PCI: 15:1e.5 cmd <- 04
+PCI: 15:1e.6 cmd <- 04
+PCI: 15:1f.0 cmd <- 04
+PCI: 15:1f.1 cmd <- 04
+PCI: 15:1f.2 cmd <- 04
+PCI: 15:1f.3 cmd <- 04
+PCI: 15:1f.4 cmd <- 04
+PCI: 15:1f.5 cmd <- 04
+PCI: 15:1f.6 cmd <- 04
+PCI: 15:1f.7 cmd <- 04
+PCI: 63:00.0 bridge ctrl <- 0013
+PCI: 63:00.0 cmd <- 407
+PCI: 63:01.0 bridge ctrl <- 0013
+PCI: 63:01.0 cmd <- 07
+PCI: 63:02.0 bridge ctrl <- 0013
+PCI: 63:02.0 cmd <- 07
+PCI: 63:03.0 bridge ctrl <- 0013
+PCI: 63:03.0 cmd <- 07
+PCI: 63:05.0 cmd <- 04
+PCI: 63:05.2 cmd <- 04
+PCI: 63:05.6 cmd <- 00
+PCI: 63:07.0 cmd <- 04
+PCI: 63:07.1 cmd <- 04
+PCI: 63:07.2 cmd <- 04
+PCI: 63:07.3 cmd <- 04
+PCI: 63:07.4 cmd <- 04
+PCI: 63:07.7 cmd <- 04
+PCI: 63:08.0 cmd <- 04
+PCI: 63:08.1 cmd <- 04
+PCI: 63:09.0 cmd <- 04
+PCI: 63:09.1 cmd <- 04
+PCI: 63:0a.0 cmd <- 04
+PCI: 63:0a.1 cmd <- 04
+PCI: 63:0a.2 cmd <- 04
+PCI: 63:0a.3 cmd <- 04
+PCI: 63:0a.4 cmd <- 04
+PCI: 63:0a.5 cmd <- 04
+PCI: 63:0a.6 cmd <- 04
+PCI: 63:0a.7 cmd <- 04
+PCI: 63:0b.0 cmd <- 04
+PCI: 63:0b.1 cmd <- 04
+PCI: 63:0b.2 cmd <- 04
+PCI: 63:0b.3 cmd <- 04
+PCI: 63:0c.0 cmd <- 04
+PCI: 63:0c.1 cmd <- 04
+PCI: 63:0c.2 cmd <- 04
+PCI: 63:0c.3 cmd <- 04
+PCI: 63:0c.4 cmd <- 04
+PCI: 63:0c.5 cmd <- 04
+PCI: 63:0c.6 cmd <- 04
+PCI: 63:0c.7 cmd <- 04
+PCI: 63:0d.0 cmd <- 04
+PCI: 63:0d.1 cmd <- 04
+PCI: 63:0d.2 cmd <- 04
+PCI: 63:0d.3 cmd <- 04
+PCI: b2:00.0 bridge ctrl <- 0013
+PCI: b2:00.0 cmd <- 407
+PCI: b2:01.0 bridge ctrl <- 0013
+PCI: b2:01.0 cmd <- 407
+PCI: b2:02.0 bridge ctrl <- 0013
+PCI: b2:02.0 cmd <- 407
+PCI: b2:03.0 bridge ctrl <- 0013
+PCI: b2:03.0 cmd <- 407
+PCI: b2:05.0 cmd <- 04
+PCI: b2:05.2 cmd <- 04
+PCI: b2:05.6 cmd <- 00
+PCI: b2:07.0 cmd <- 04
+PCI: b2:07.1 cmd <- 04
+PCI: b2:07.2 cmd <- 04
+PCI: b2:07.3 cmd <- 04
+PCI: b2:07.4 cmd <- 04
+PCI: b2:07.7 cmd <- 04
+PCI: b5:00.0 cmd <- 02
+PCI: b5:00.1 cmd <- 02
+done.
+BS: BS_DEV_ENABLE run times (exec / console): 1 / 542 ms
+Initializing devices...
+CPU_CLUSTER: 0 init
+CBFS: Found 'cpu_microcode_blob.bin' @0xc0f580 size 0x7400 in mcache @0x737de298
+microcode: sig=0x5065b pf=0x80 revision=0x7002501
+microcode: Update skipped, already up-to-date
+MTRR: Physical address space:
+0x0000000000000000 - 0x000000000009ffff size 0x000a0000 type 6
+0x00000000000a0000 - 0x00000000000bffff size 0x00020000 type 0
+0x00000000000c0000 - 0x000000007fffffff size 0x7ff40000 type 6
+0x0000000080000000 - 0x00000000ffffffff size 0x80000000 type 0
+0x0000000100000000 - 0x000000107fffffff size 0xf80000000 type 6
+0x0000200000000000 - 0x00002000001fffff size 0x00200000 type 0
+0x0000201000000000 - 0x00002010003fffff size 0x00400000 type 0
+0x0000202000000000 - 0x00002020003fffff size 0x00400000 type 0
+0x0000203000000000 - 0x00002030008fffff size 0x00900000 type 0
+MTRR: Fixed MSR 0x250 0x0606060606060606
+MTRR: Fixed MSR 0x258 0x0606060606060606
+MTRR: Fixed MSR 0x259 0x0000000000000000
+MTRR: Fixed MSR 0x268 0x0606060606060606
+MTRR: Fixed MSR 0x269 0x0606060606060606
+MTRR: Fixed MSR 0x26a 0x0606060606060606
+MTRR: Fixed MSR 0x26b 0x0606060606060606
+MTRR: Fixed MSR 0x26c 0x0606060606060606
+MTRR: Fixed MSR 0x26d 0x0606060606060606
+MTRR: Fixed MSR 0x26e 0x0606060606060606
+MTRR: Fixed MSR 0x26f 0x0606060606060606
+CPU physical address size: 46 bits
+MTRR: default type WB/UC MTRR counts: 6/6.
+MTRR: UC selected as default type.
+MTRR: 0 base 0x0000000000000000 mask 0x00003fff80000000 type 6
+MTRR: 1 base 0x0000000100000000 mask 0x00003fff00000000 type 6
+MTRR: 2 base 0x0000000200000000 mask 0x00003ffe00000000 type 6
+MTRR: 3 base 0x0000000400000000 mask 0x00003ffc00000000 type 6
+MTRR: 4 base 0x0000000800000000 mask 0x00003ff800000000 type 6
+MTRR: 5 base 0x0000001000000000 mask 0x00003fff80000000 type 6
+
+MTRR check
+Fixed MTRRs   : Enabled
+Variable MTRRs: Enabled
+
+IED base = 0x7fc00000
+IED size = 0x00400000
+Will perform SMM setup.
+CPU: Intel(R) Xeon(R) Platinum 8369HB CPU @ 3.30GHz.
+LAPIC 0x0 in XAPIC mode.
+Loading module at 0x00030000 with entry 0x00030000. filesize: 0x178 memsize: 0x178
+Processing 18 relocs. Offset value of 0x00030000
+Attempting to start 95 APs
+Waiting for 10ms after sending INIT.
+Waiting for SIPI to complete...
+done.
+LAPIC 0x1 in XAPIC mode.
+Waiting for SIPI to complete...
+done.
+AP: slot 7 apic_id 1, MCU rev: 0x07002501
+LAPIC 0x12 in XAPIC mode.
+Not all APs checked in: 47/95.
+LAPIC 0x25 in XAPIC mode.
+LAPIC 0x7 in XAPIC mode.
+LAPIC 0x36 in XAPIC mode.
+AP: slot 1 apic_id 12, MCU rev: 0x07002501
+LAPIC 0x8 in XAPIC mode.
+LAPIC 0x9 in XAPIC mode.
+AP: slot 26 apic_id 8, MCU rev: 0x07002501
+LAPIC 0x13 in XAPIC mode.
+AP: slot 2 apic_id 13, MCU rev: 0x07002501
+LAPIC 0x35 in XAPIC mode.
+AP: slot 28 apic_id 9, MCU rev: 0x07002501
+LAPIC 0x34 in XAPIC mode.
+AP: slot 9 apic_id 35, MCU rev: 0x07002501
+AP: slot 11 apic_id 34, MCU rev: 0x07002501
+LAPIC 0x18 in XAPIC mode.
+LAPIC 0x32 in XAPIC mode.
+LAPIC 0x33 in XAPIC mode.
+LAPIC 0x4 in XAPIC mode.
+LAPIC 0x21 in XAPIC mode.
+LAPIC 0x20 in XAPIC mode.
+AP: slot 33 apic_id 21, MCU rev: 0x07002501
+AP: slot 36 apic_id 20, MCU rev: 0x07002501
+AP: slot 4 apic_id 32, MCU rev: 0x07002501
+AP: slot 3 apic_id 33, MCU rev: 0x07002501
+AP: slot 42 apic_id 4, MCU rev: 0x07002501
+LAPIC 0x5 in XAPIC mode.
+AP: slot 31 apic_id 18, MCU rev: 0x07002501
+AP: slot 43 apic_id 5, MCU rev: 0x07002501
+LAPIC 0x19 in XAPIC mode.
+AP: slot 30 apic_id 19, MCU rev: 0x07002501
+47/95 eventually checked in?
+MP initialization failure.
+ASSERTION ERROR: file 'src/soc/intel/xeon_sp/util.c', line 190
+LAPIC 0x6 in XAPIC mode.
+CPU 0 apic_id: 0x0 (0), node_id: 0x0
+CPU 1 apic_id: 0x4 (4), node_id: 0x0
+CPU 2 apic_id: 0x6 (6), node_id: 0x0
+CPU 3 apic_id: 0x8 (8), node_id: 0x0
+CPU 4 apic_id: 0x8 (8), node_id: 0x0
+CPU 5 apic_id: 0xa (10), node_id: 0x0
+CPU 6 apic_id: 0xe (14), node_id: 0x0
+CPU 7 apic_id: 0x10 (16), node_id: 0x0
+CPU 8 apic_id: 0x12 (18), node_id: 0x0
+CPU 9 apic_id: 0x12 (18), node_id: 0x0
+CPU 10 apic_id: 0x14 (20), node_id: 0x0
+CPU 11 apic_id: 0x16 (22), node_id: 0x0
+CPU 12 apic_id: 0x18 (24), node_id: 0x0
+CPU 13 apic_id: 0x18 (24), node_id: 0x0
+CPU 14 apic_id: 0x20 (32), node_id: 0x0
+CPU 15 apic_id: 0x20 (32), node_id: 0x0
+CPU 16 apic_id: 0x22 (34), node_id: 0x0
+CPU 17 apic_id: 0x26 (38), node_id: 0x0
+CPU 18 apic_id: 0x28 (40), node_id: 0x0
+CPU 19 apic_id: 0x2c (44), node_id: 0x0
+CPU 20 apic_id: 0x30 (48), node_id: 0x0
+CPU 21 apic_id: 0x32 (50), node_id: 0x0
+CPU 22 apic_id: 0x32 (50), node_id: 0x0
+CPU 23 apic_id: 0x34 (52), node_id: 0x0
+CPU 24 apic_id: 0x34 (52), node_id: 0x0
+CPU 25 apic_id: 0x36 (54), node_id: 0x0
+CPU 26 apic_id: 0x36 (54), node_id: 0x0
+CPU 27 apic_id: 0x38 (56), node_id: 0x0
+CPU 28 apic_id: 0x3a (58), node_id: 0x0
+CPU 29 apic_id: 0x3c (60), node_id: 0x0
+CPU 30 apic_id: 0x3e (62), node_id: 0x0
+CPU 31 apic_id: 0x40 (64), node_id: 0x1
+CPU 32 apic_id: 0x42 (66), node_id: 0x1
+CPU 33 apic_id: 0x44 (68), node_id: 0x1
+CPU 34 apic_id: 0x46 (70), node_id: 0x1
+CPU 35 apic_id: 0x48 (72), node_id: 0x1
+CPU 36 apic_id: 0x4a (74), node_id: 0x1
+CPU 37 apic_id: 0x4c (76), node_id: 0x1
+CPU 38 apic_id: 0x4e (78), node_id: 0x1
+CPU 39 apic_id: 0x50 (80), node_id: 0x1
+CPU 40 apic_id: 0x52 (82), node_id: 0x1
+CPU 41 apic_id: 0x54 (84), node_id: 0x1
+CPU 42 apic_id: 0x56 (86), node_id: 0x1
+CPU 43 apic_id: 0x58 (88), node_id: 0x1
+CPU 44 apic_id: 0x5a (90), node_id: 0x1
+CPU 45 apic_id: 0x5c (92), node_id: 0x1
+CPU 46 apic_id: 0x5e (94), node_id: 0x1
+CPU 47 apic_id: 0x0 (0), node_id: 0x0
+CPU 48 apic_id: 0x1 (1), node_id: 0x0
+CPU 49 apic_id: 0x5 (5), node_id: 0x0
+CPU 50 apic_id: 0x7 (7), node_id: 0x0
+CPU 51 apic_id: 0x0 (0), node_id: 0x0
+CPU 52 apic_id: 0x9 (9), node_id: 0x0
+CPU 53 apic_id: 0xd (13), node_id: 0x0
+CPU 54 apic_id: 0xf (15), node_id: 0x0
+CPU 55 apic_id: 0x11 (17), node_id: 0x0
+CPU 56 apic_id: 0x0 (0), node_id: 0x0
+CPU 57 apic_id: 0x13 (19), node_id: 0x0
+CPU 58 apic_id: 0x15 (21), node_id: 0x0
+CPU 59 apic_id: 0x17 (23), node_id: 0x0
+CPU 60 apic_id: 0x0 (0), node_id: 0x0
+CPU 61 apic_id: 0x1d (29), node_id: 0x0
+CPU 62 apic_id: 0x0 (0), node_id: 0x0
+CPU 63 apic_id: 0x21 (33), node_id: 0x0
+CPU 64 apic_id: 0x25 (37), node_id: 0x0
+CPU 65 apic_id: 0x27 (39), node_id: 0x0
+CPU 66 apic_id: 0x29 (41), node_id: 0x0
+CPU 67 apic_id: 0x2f (47), node_id: 0x0
+CPU 68 apic_id: 0x31 (49), node_id: 0x0
+CPU 69 apic_id: 0x0 (0), node_id: 0x0
+CPU 70 apic_id: 0x33 (51), node_id: 0x0
+CPU 71 apic_id: 0x0 (0), node_id: 0x0
+CPU 72 apic_id: 0x35 (53), node_id: 0x0
+CPU 73 apic_id: 0x0 (0), node_id: 0x0
+CPU 74 apic_id: 0x37 (55), node_id: 0x0
+CPU 75 apic_id: 0x39 (57), node_id: 0x0
+CPU 76 apic_id: 0x3b (59), node_id: 0x0
+CPU 77 apic_id: 0x3d (61), node_id: 0x0
+CPU 78 apic_id: 0x3f (63), node_id: 0x0
+CPU 79 apic_id: 0x41 (65), node_id: 0x1
+CPU 80 apic_id: 0x43 (67), node_id: 0x1
+CPU 81 apic_id: 0x45 (69), node_id: 0x1
+CPU 82 apic_id: 0x47 (71), node_id: 0x1
+CPU 83 apic_id: 0x49 (73), node_id: 0x1
+CPU 84 apic_id: 0x4b (75), node_id: 0x1
+CPU 85 apic_id: 0x4d (77), node_id: 0x1
+CPU 86 apic_id: 0x4f (79), node_id: 0x1
+CPU 87 apic_id: 0x51 (81), node_id: 0x1
+CPU 88 apic_id: 0x53 (83), node_id: 0x1
+CPU 89 apic_id: 0x55 (85), node_id: 0x1
+CPU 90 apic_id: 0x57 (87), node_id: 0x1
+CPU 91 apic_id: 0x59 (89), node_id: 0x1
+CPU 92 apic_id: 0x5b (91), node_id: 0x1
+CPU 93 apic_id: 0x5d (93), node_id: 0x1
+CPU 94 apic_id: 0x5f (95), node_id: 0x1
+CPU 95 apic_id: 0x0 (0), node_id: 0x0
+AP: slot 47 apic_id 6, MCU rev: 0x07002501
+AP: slot 46 apic_id 7, MCU rev: 0x07002501
+LAPIC 0x2a in XAPIC mode.
+LAPIC 0x1b in XAPIC mode.
+LAPIC 0x1a in XAPIC mode.
+AP: slot 38 apic_id 1b, MCU rev: 0x07002501
+CPU_CLUSTER: 0 init finished in 1875 msecs
+AP: slot 39 apic_id 1a, MCU rev: 0x07002501
+LAPIC 0x2b in XAPIC mode.
+AP: slot 18 apic_id 2a, MCU rev: 0x07002501
+AP: slot 16 apic_id 2b, MCU rev: 0x07002501
+LAPIC 0x14 in XAPIC mode.
+LAPIC 0x15 in XAPIC mode.
+AP: slot 45 apic_id 14, MCU rev: 0x07002501
+AP: slot 44 apic_id 15, MCU rev: 0x07002501
+LAPIC 0x17 in XAPIC mode.
+LAPIC 0x11 in XAPIC mode.
+LAPIC 0x10 in XAPIC mode.
+AP: slot 8 apic_id 11, MCU rev: 0x07002501
+AP: slot 34 apic_id 17, MCU rev: 0x07002501
+LAPIC 0x16 in XAPIC mode.
+PCI: 00:00.0 init
+AP: slot 10 apic_id 10, MCU rev: 0x07002501
+PCI: 00:00.0 init finished in 0 msecs
+AP: slot 37 apic_id 16, MCU rev: 0x07002501
+LAPIC 0x3a in XAPIC mode.
+LAPIC 0x3b in XAPIC mode.
+PCI: 00:04.0 init
+AP: slot 20 apic_id 3a, MCU rev: 0x07002501
+AP: slot 21 apic_id 3b, MCU rev: 0x07002501
+PCI: 00:04.0 init finished in 0 msecs
+PCI: 00:04.1 init
+PCI: 00:04.1 init finished in 0 msecs
+PCI: 00:04.2 init
+PCI: 00:04.2 init finished in 0 msecs
+PCI: 00:04.3 init
+PCI: 00:04.3 init finished in 0 msecs
+PCI: 00:04.4 init
+PCI: 00:04.4 init finished in 0 msecs
+PCI: 00:04.5 init
+LAPIC 0x30 in XAPIC mode.
+LAPIC 0x31 in XAPIC mode.
+AP: slot 23 apic_id 30, MCU rev: 0x07002501
+AP: slot 25 apic_id 31, MCU rev: 0x07002501
+PCI: 00:04.5 init finished in 0 msecs
+PCI: 00:04.6 init
+PCI: 00:04.6 init finished in 0 msecs
+PCI: 00:04.7 init
+PCI: 00:04.7 init finished in 0 msecs
+PCI: 00:05.0 init
+PCI: 00:05.0 init finished in 0 msecs
+PCI: 00:05.2 init
+PCI: 00:05.2 init finished in 0 msecs
+PCI: 00:08.0 init
+PCI: 00:08.0 init finished in 0 msecs
+PCI: 00:08.1 init
+PCI: 00:08.1 init finished in 0 msecs
+PCI: 00:08.2 init
+PCI: 00:08.2 init finished in 0 msecs
+PCI: 00:11.0 init
+PCI: 00:11.0 init finished in 0 msecs
+LAPIC 0x26 in XAPIC mode.
+LAPIC 0x27 in XAPIC mode.
+AP: slot 19 apic_id 26, MCU rev: 0x07002501
+AP: slot 17 apic_id 27, MCU rev: 0x07002501
+PCI: 00:14.0 init
+PCI: 00:14.0 init finished in 0 msecs
+PCI: 00:16.0 init
+PCI: 00:16.0 init finished in 0 msecs
+PCI: 00:16.4 init
+PCI: 00:16.4 init finished in 0 msecs
+PCI: 00:1f.2 init
+Set power off after power failure.
+apm_control: Disabling ACPI.
+APMC done.
+PCI: 00:1f.2 init finished in 6 msecs
+PCI: 00:1f.4 init
+PCI: 00:1f.4 init finished in 0 msecs
+PCI: 00:1f.0 init
+PCI: 00:1f.0 init finished in 0 msecs
+PCI: 02:00.0 init
+CBFS: 'pci1a03,2000.rom' not found.
+AP: slot 12 apic_id 36, MCU rev: 0x07002501
+LAPIC 0x37 in XAPIC mode.
+PCI: 02:00.0 init finished in 3 msecs
+PCI: 02:01.0 init
+AP: slot 13 apic_id 37, MCU rev: 0x07002501
+PCI: 02:01.0 init finished in 0 msecs
+PNP: 002e.2 init
+PNP: 002e.2 init finished in 0 msecs
+PNP: 002e.3 init
+PNP: 002e.3 init finished in 0 msecs
+PNP: 002e.4 init
+PNP: 002e.4 init finished in 0 msecs
+PNP: 002e.5 init
+PNP: 002e.5 init finished in 0 msecs
+PNP: 002e.7 init
+PNP: 002e.7 init finished in 0 msecs
+PNP: 002e.d init
+PNP: 002e.d init finished in 0 msecs
+PNP: 002e.e init
+PNP: 002e.e init finished in 0 msecs
+PCI: 15:05.2 init
+PCI: 15:05.2 init finished in 0 msecs
+LAPIC 0x22 in XAPIC mode.
+LAPIC 0x23 in XAPIC mode.
+AP: slot 40 apic_id 22, MCU rev: 0x07002501
+AP: slot 41 apic_id 23, MCU rev: 0x07002501
+PCI: 15:05.6 init
+PCI: 15:05.6 init finished in 0 msecs
+PCI: 15:07.0 init
+PCI: 15:07.0 init finished in 0 msecs
+PCI: 15:07.1 init
+PCI: 15:07.1 init finished in 0 msecs
+PCI: 15:07.2 init
+PCI: 15:07.2 init finished in 0 msecs
+PCI: 15:07.3 init
+PCI: 15:07.3 init finished in 0 msecs
+PCI: 15:07.4 init
+PCI: 15:07.4 init finished in 0 msecs
+PCI: 15:07.7 init
+PCI: 15:07.7 init finished in 0 msecs
+PCI: 15:08.0 init
+PCI: 15:08.0 init finished in 0 msecs
+PCI: 15:08.1 init
+LAPIC 0x39 in XAPIC mode.
+PCI: 15:08.1 init finished in 0 msecs
+PCI: 15:08.2 init
+AP: slot 32 apic_id 39, MCU rev: 0x07002501
+LAPIC 0x38 in XAPIC mode.
+PCI: 15:08.2 init finished in 0 msecs
+PCI: 15:08.3 init
+AP: slot 35 apic_id 38, MCU rev: 0x07002501
+PCI: 15:08.3 init finished in 0 msecs
+PCI: 15:08.4 init
+PCI: 15:08.4 init finished in 0 msecs
+PCI: 15:08.5 init
+PCI: 15:08.5 init finished in 0 msecs
+PCI: 15:08.6 init
+PCI: 15:08.6 init finished in 0 msecs
+PCI: 15:08.7 init
+PCI: 15:08.7 init finished in 0 msecs
+PCI: 15:09.0 init
+PCI: 15:09.0 init finished in 0 msecs
+PCI: 15:09.1 init
+PCI: 15:09.1 init finished in 0 msecs
+PCI: 15:09.2 init
+LAPIC 0x2 in XAPIC mode.
+LAPIC 0x3 in XAPIC mode.
+AP: slot 22 apic_id 2, MCU rev: 0x07002501
+PCI: 15:09.2 init finished in 0 msecs
+PCI: 15:09.3 init
+AP: slot 24 apic_id 3, MCU rev: 0x07002501
+PCI: 15:09.3 init finished in 0 msecs
+PCI: 15:09.4 init
+PCI: 15:09.4 init finished in 0 msecs
+PCI: 15:09.5 init
+PCI: 15:09.5 init finished in 0 msecs
+PCI: 15:09.6 init
+PCI: 15:09.6 init finished in 0 msecs
+PCI: 15:09.7 init
+PCI: 15:09.7 init finished in 0 msecs
+PCI: 15:0a.0 init
+PCI: 15:0a.0 init finished in 0 msecs
+PCI: 15:0a.1 init
+PCI: 15:0a.1 init finished in 0 msecs
+PCI: 15:0a.2 init
+PCI: 15:0a.2 init finished in 0 msecs
+PCI: 15:0a.3 init
+PCI: 15:0a.3 init finished in 0 msecs
+PCI: 15:0a.4 init
+PCI: 15:0a.4 init finished in 0 msecs
+PCI: 15:0a.5 init
+PCI: 15:0a.5 init finished in 0 msecs
+PCI: 15:0a.6 init
+PCI: 15:0a.6 init finished in 0 msecs
+PCI: 15:0a.7 init
+PCI: 15:0a.7 init finished in 0 msecs
+PCI: 15:0b.0 init
+PCI: 15:0b.0 init finished in 0 msecs
+PCI: 15:0b.1 init
+PCI: 15:0b.1 init finished in 0 msecs
+PCI: 15:0b.2 init
+PCI: 15:0b.2 init finished in 0 msecs
+PCI: 15:0b.3 init
+PCI: 15:0b.3 init finished in 0 msecs
+PCI: 15:0e.0 init
+PCI: 15:0e.0 init finished in 0 msecs
+PCI: 15:0e.1 init
+PCI: 15:0e.1 init finished in 0 msecs
+PCI: 15:0e.2 init
+PCI: 15:0e.2 init finished in 0 msecs
+AP: slot 5 apic_id 25, MCU rev: 0x07002501
+LAPIC 0x24 in XAPIC mode.
+PCI: 15:0e.3 init
+AP: slot 6 apic_id 24, MCU rev: 0x07002501
+PCI: 15:0e.3 init finished in 0 msecs
+PCI: 15:0e.4 init
+PCI: 15:0e.4 init finished in 0 msecs
+PCI: 15:0e.5 init
+PCI: 15:0e.5 init finished in 0 msecs
+PCI: 15:0e.6 init
+PCI: 15:0e.6 init finished in 0 msecs
+PCI: 15:0e.7 init
+PCI: 15:0e.7 init finished in 0 msecs
+PCI: 15:0f.0 init
+PCI: 15:0f.0 init finished in 0 msecs
+PCI: 15:0f.1 init
+PCI: 15:0f.1 init finished in 0 msecs
+PCI: 15:0f.2 init
+PCI: 15:0f.2 init finished in 0 msecs
+PCI: 15:0f.3 init
+LAPIC 0xa in XAPIC mode.
+LAPIC 0xb in XAPIC mode.
+AP: slot 14 apic_id a, MCU rev: 0x07002501
+AP: slot 15 apic_id b, MCU rev: 0x07002501
+PCI: 15:0f.3 init finished in 0 msecs
+PCI: 15:0f.4 init
+PCI: 15:0f.4 init finished in 0 msecs
+PCI: 15:0f.5 init
+PCI: 15:0f.5 init finished in 0 msecs
+PCI: 15:0f.6 init
+PCI: 15:0f.6 init finished in 0 msecs
+PCI: 15:0f.7 init
+PCI: 15:0f.7 init finished in 0 msecs
+LAPIC 0x28 in XAPIC mode.
+LAPIC 0x29 in XAPIC mode.
+AP: slot 27 apic_id 28, MCU rev: 0x07002501
+AP: slot 29 apic_id 29, MCU rev: 0x07002501
+PCI: 15:10.0 init
+PCI: 15:10.0 init finished in 0 msecs
+PCI: 15:10.1 init
+PCI: 15:10.1 init finished in 0 msecs
+PCI: 15:10.2 init
+PCI: 15:10.2 init finished in 0 msecs
+PCI: 15:10.3 init
+PCI: 15:10.3 init finished in 0 msecs
+PCI: 15:10.4 init
+PCI: 15:10.4 init finished in 0 msecs
+PCI: 15:10.5 init
+PCI: 15:10.5 init finished in 0 msecs
+PCI: 15:10.6 init
+PCI: 15:10.6 init finished in 0 msecs
+PCI: 15:10.7 init
+PCI: 15:10.7 init finished in 0 msecs
+PCI: 15:11.0 init
+PCI: 15:11.0 init finished in 0 msecs
+PCI: 15:11.1 init
+PCI: 15:11.1 init finished in 0 msecs
+PCI: 15:11.2 init
+PCI: 15:11.2 init finished in 0 msecs
+PCI: 15:11.3 init
+PCI: 15:11.3 init finished in 0 msecs
+PCI: 15:14.0 init
+PCI: 15:14.0 init finished in 0 msecs
+PCI: 15:14.1 init
+PCI: 15:14.1 init finished in 0 msecs
+PCI: 15:14.2 init
+PCI: 15:14.2 init finished in 0 msecs
+PCI: 15:14.3 init
+PCI: 15:14.3 init finished in 0 msecs
+PCI: 15:14.4 init
+PCI: 15:14.4 init finished in 0 msecs
+PCI: 15:14.5 init
+PCI: 15:14.5 init finished in 0 msecs
+PCI: 15:14.6 init
+PCI: 15:14.6 init finished in 0 msecs
+PCI: 15:14.7 init
+PCI: 15:14.7 init finished in 0 msecs
+PCI: 15:15.0 init
+PCI: 15:15.0 init finished in 0 msecs
+PCI: 15:15.1 init
+PCI: 15:15.1 init finished in 0 msecs
+PCI: 15:15.2 init
+PCI: 15:15.2 init finished in 0 msecs
+PCI: 15:15.3 init
+PCI: 15:15.3 init finished in 0 msecs
+PCI: 15:15.4 init
+PCI: 15:15.4 init finished in 0 msecs
+PCI: 15:15.5 init
+PCI: 15:15.5 init finished in 0 msecs
+PCI: 15:15.6 init
+PCI: 15:15.6 init finished in 0 msecs
+PCI: 15:15.7 init
+PCI: 15:15.7 init finished in 0 msecs
+PCI: 15:16.0 init
+PCI: 15:16.0 init finished in 0 msecs
+PCI: 15:16.1 init
+PCI: 15:16.1 init finished in 0 msecs
+PCI: 15:16.2 init
+PCI: 15:16.2 init finished in 0 msecs
+PCI: 15:16.3 init
+PCI: 15:16.3 init finished in 0 msecs
+PCI: 15:16.4 init
+PCI: 15:16.4 init finished in 0 msecs
+PCI: 15:16.5 init
+PCI: 15:16.5 init finished in 0 msecs
+PCI: 15:16.6 init
+PCI: 15:16.6 init finished in 0 msecs
+PCI: 15:16.7 init
+PCI: 15:16.7 init finished in 0 msecs
+PCI: 15:17.0 init
+PCI: 15:17.0 init finished in 0 msecs
+PCI: 15:17.1 init
+PCI: 15:17.1 init finished in 0 msecs
+PCI: 15:17.2 init
+PCI: 15:17.2 init finished in 0 msecs
+PCI: 15:17.3 init
+PCI: 15:17.3 init finished in 0 msecs
+PCI: 15:1d.0 init
+PCI: 15:1d.0 init finished in 0 msecs
+PCI: 15:1d.1 init
+PCI: 15:1d.1 init finished in 0 msecs
+PCI: 15:1d.2 init
+PCI: 15:1d.2 init finished in 0 msecs
+PCI: 15:1d.3 init
+PCI: 15:1d.3 init finished in 0 msecs
+PCI: 15:1e.0 init
+PCI: 15:1e.0 init finished in 0 msecs
+PCI: 15:1e.1 init
+PCI: 15:1e.1 init finished in 0 msecs
+PCI: 15:1e.2 init
+PCI: 15:1e.2 init finished in 0 msecs
+PCI: 15:1e.3 init
+PCI: 15:1e.3 init finished in 0 msecs
+PCI: 15:1e.4 init
+PCI: 15:1e.4 init finished in 0 msecs
+PCI: 15:1e.5 init
+PCI: 15:1e.5 init finished in 0 msecs
+PCI: 15:1e.6 init
+PCI: 15:1e.6 init finished in 0 msecs
+PCI: 15:1f.0 init
+PCI: 15:1f.0 init finished in 0 msecs
+PCI: 15:1f.1 init
+PCI: 15:1f.1 init finished in 0 msecs
+PCI: 15:1f.2 init
+PCI: 15:1f.2 init finished in 0 msecs
+PCI: 15:1f.3 init
+PCI: 15:1f.3 init finished in 0 msecs
+PCI: 15:1f.4 init
+PCI: 15:1f.4 init finished in 0 msecs
+PCI: 15:1f.5 init
+PCI: 15:1f.5 init finished in 0 msecs
+PCI: 15:1f.6 init
+PCI: 15:1f.6 init finished in 0 msecs
+PCI: 15:1f.7 init
+PCI: 15:1f.7 init finished in 0 msecs
+PCI: 63:05.2 init
+PCI: 63:05.2 init finished in 0 msecs
+PCI: 63:05.6 init
+PCI: 63:05.6 init finished in 0 msecs
+PCI: 63:07.0 init
+PCI: 63:07.0 init finished in 0 msecs
+PCI: 63:07.1 init
+PCI: 63:07.1 init finished in 0 msecs
+PCI: 63:07.2 init
+PCI: 63:07.2 init finished in 0 msecs
+PCI: 63:07.3 init
+PCI: 63:07.3 init finished in 0 msecs
+PCI: 63:07.4 init
+PCI: 63:07.4 init finished in 0 msecs
+PCI: 63:07.7 init
+PCI: 63:07.7 init finished in 0 msecs
+PCI: 63:08.0 init
+PCI: 63:08.0 init finished in 0 msecs
+PCI: 63:08.1 init
+PCI: 63:08.1 init finished in 0 msecs
+PCI: 63:09.0 init
+PCI: 63:09.0 init finished in 0 msecs
+PCI: 63:09.1 init
+PCI: 63:09.1 init finished in 0 msecs
+PCI: 63:0a.0 init
+PCI: 63:0a.0 init finished in 0 msecs
+PCI: 63:0a.1 init
+PCI: 63:0a.1 init finished in 0 msecs
+PCI: 63:0a.2 init
+PCI: 63:0a.2 init finished in 0 msecs
+PCI: 63:0a.3 init
+PCI: 63:0a.3 init finished in 0 msecs
+PCI: 63:0a.4 init
+PCI: 63:0a.4 init finished in 0 msecs
+PCI: 63:0a.5 init
+PCI: 63:0a.5 init finished in 0 msecs
+PCI: 63:0a.6 init
+PCI: 63:0a.6 init finished in 0 msecs
+PCI: 63:0a.7 init
+PCI: 63:0a.7 init finished in 0 msecs
+PCI: 63:0b.0 init
+PCI: 63:0b.0 init finished in 0 msecs
+PCI: 63:0b.1 init
+PCI: 63:0b.1 init finished in 0 msecs
+PCI: 63:0b.2 init
+PCI: 63:0b.2 init finished in 0 msecs
+PCI: 63:0b.3 init
+PCI: 63:0b.3 init finished in 0 msecs
+PCI: 63:0c.0 init
+PCI: 63:0c.0 init finished in 0 msecs
+PCI: 63:0c.1 init
+PCI: 63:0c.1 init finished in 0 msecs
+PCI: 63:0c.2 init
+PCI: 63:0c.2 init finished in 0 msecs
+PCI: 63:0c.3 init
+PCI: 63:0c.3 init finished in 0 msecs
+PCI: 63:0c.4 init
+PCI: 63:0c.4 init finished in 0 msecs
+PCI: 63:0c.5 init
+PCI: 63:0c.5 init finished in 0 msecs
+PCI: 63:0c.6 init
+PCI: 63:0c.6 init finished in 0 msecs
+PCI: 63:0c.7 init
+PCI: 63:0c.7 init finished in 0 msecs
+PCI: 63:0d.0 init
+PCI: 63:0d.0 init finished in 0 msecs
+PCI: 63:0d.1 init
+PCI: 63:0d.1 init finished in 0 msecs
+PCI: 63:0d.2 init
+PCI: 63:0d.2 init finished in 0 msecs
+PCI: 63:0d.3 init
+PCI: 63:0d.3 init finished in 0 msecs
+PCI: b2:05.2 init
+PCI: b2:05.2 init finished in 0 msecs
+PCI: b2:05.6 init
+PCI: b2:05.6 init finished in 0 msecs
+PCI: b2:07.0 init
+PCI: b2:07.0 init finished in 0 msecs
+PCI: b2:07.1 init
+PCI: b2:07.1 init finished in 0 msecs
+PCI: b2:07.2 init
+PCI: b2:07.2 init finished in 0 msecs
+PCI: b2:07.3 init
+PCI: b2:07.3 init finished in 0 msecs
+PCI: b2:07.4 init
+PCI: b2:07.4 init finished in 0 msecs
+PCI: b2:07.7 init
+PCI: b2:07.7 init finished in 0 msecs
+PCI: b5:00.0 init
+PCI: b5:00.0 init finished in 0 msecs
+PCI: b5:00.1 init
+PCI: b5:00.1 init finished in 0 msecs
+Devices initialized
+BS: BS_DEV_INIT run times (exec / console): 1523 / 1499 ms
+Finalize devices...
+PCI: 00:11.5 final
+PCI: 00:16.0 final
+PCI: 00:17.0 final
+PCI: 00:1f.2 final
+PCI: 00:1f.4 final
+Devices finalized
+BS: BS_POST_DEVICE run times (exec / console): 0 / 12 ms
+CBFS: Found 'fallback/dsdt.aml' @0x20100 size 0x868 in mcache @0x737de198
+CBFS: 'fallback/slic' not found.
+ACPI: Writing ACPI tables at 73288000.
+ACPI:    * FACS
+ACPI:    * DSDT
+	Creating ResourceTemplate RT00 for stack: 0
+	Creating ResourceTemplate RT01 for stack: 1
+	Creating ResourceTemplate RT02 for stack: 2
+	Creating ResourceTemplate RT03 for stack: 3
+ACPI:    * FADT
+SCI is IRQ9
+ACPI: added table 1/32, length now 40
+ACPI:     * SSDT
+Found 2 CPU(s) with 24/48 physical/logical core(s) each.
+Turbo is available but hidden
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+PSS: 3300MHz power 230000 control 0x2100 status 0x2100
+PSS: 3200MHz power 220195 control 0x2000 status 0x2000
+PSS: 3000MHz power 201961 control 0x1e00 status 0x1e00
+PSS: 2800MHz power 183922 control 0x1c00 status 0x1c00
+PSS: 2600MHz power 166710 control 0x1a00 status 0x1a00
+PSS: 2400MHz power 150489 control 0x1800 status 0x1800
+PSS: 2200MHz power 134492 control 0x1600 status 0x1600
+PSS: 2000MHz power 119448 control 0x1400 status 0x1400
+PSS: 1800MHz power 104792 control 0x1200 status 0x1200
+PSS: 1600MHz power 90837 control 0x1000 status 0x1000
+PSS: 1400MHz power 77528 control 0xe00 status 0xe00
+PSS: 1200MHz power 64704 control 0xc00 status 0xc00
+\_SB.PC00.LPCB.SIO0: PNP: 002e.0
+\_SB.PC00.LPCB.SIO0.L020: PNP: 002e.2
+\_SB.PC00.LPCB.SIO0.L030: PNP: 002e.3
+CBFS: 'pci1a03,2000.rom' not found.
+PCI: 02:00.0: Missing PCI Option ROM
+\_SB.PC00.LPCB.SIO0.L040: PNP: 002e.4
+\_SB.PC00.LPCB.SIO0.L050: PNP: 002e.5
+\_SB.PC00.LPCB.SIO0.L070: PNP: 002e.7
+\_SB.PC00.LPCB.SIO0.L0D0: PNP: 002e.d
+\_SB.PC00.LPCB.SIO0.L0E0: PNP: 002e.e
+ACPI: added table 2/32, length now 44
+ACPI:    * MCFG
+ACPI: added table 3/32, length now 48
+ACPI:    * MADT
+Adding MADT IOAPIC for socket: 0, stack: 0, ioapic_id: 0x8, ioapic_base: 0xfec00000, gsi_base: 0x0
+Adding MADT IOAPIC for socket: 0, stack: 0, ioapic_id: 0x9, ioapic_base: 0xfec01000, gsi_base: 0x78
+Adding MADT IOAPIC for socket: 0, stack: 1, ioapic_id: 0xa, ioapic_base: 0xfec08000, gsi_base: 0x80
+Adding MADT IOAPIC for socket: 0, stack: 2, ioapic_id: 0xb, ioapic_base: 0xfec10000, gsi_base: 0x88
+Adding MADT IOAPIC for socket: 0, stack: 4, ioapic_id: 0xc, ioapic_base: 0xfec18000, gsi_base: 0x90
+SCI is IRQ9
+ACPI: added table 4/32, length now 52
+current = 7329abe0
+ACPI:    * SRAT at 7329abe0
+SRAT: lapic cpu_index=00, node_id=00, apic_id=00
+SRAT: lapic cpu_index=01, node_id=00, apic_id=04
+SRAT: lapic cpu_index=02, node_id=00, apic_id=06
+SRAT: lapic cpu_index=03, node_id=00, apic_id=08
+SRAT: lapic cpu_index=04, node_id=00, apic_id=08
+SRAT: lapic cpu_index=05, node_id=00, apic_id=0a
+SRAT: lapic cpu_index=06, node_id=00, apic_id=24
+SRAT: lapic cpu_index=07, node_id=00, apic_id=10
+SRAT: lapic cpu_index=08, node_id=00, apic_id=11
+SRAT: lapic cpu_index=09, node_id=00, apic_id=12
+SRAT: lapic cpu_index=0a, node_id=00, apic_id=10
+SRAT: lapic cpu_index=0b, node_id=00, apic_id=16
+SRAT: lapic cpu_index=0c, node_id=00, apic_id=18
+SRAT: lapic cpu_index=0d, node_id=00, apic_id=37
+SRAT: lapic cpu_index=0e, node_id=00, apic_id=0a
+SRAT: lapic cpu_index=0f, node_id=00, apic_id=0b
+SRAT: lapic cpu_index=10, node_id=00, apic_id=2b
+SRAT: lapic cpu_index=11, node_id=00, apic_id=27
+SRAT: lapic cpu_index=12, node_id=00, apic_id=2a
+SRAT: lapic cpu_index=13, node_id=00, apic_id=26
+SRAT: lapic cpu_index=14, node_id=00, apic_id=3a
+SRAT: lapic cpu_index=15, node_id=00, apic_id=3b
+SRAT: lapic cpu_index=16, node_id=00, apic_id=02
+SRAT: lapic cpu_index=17, node_id=00, apic_id=30
+SRAT: lapic cpu_index=18, node_id=00, apic_id=03
+SRAT: lapic cpu_index=19, node_id=00, apic_id=31
+SRAT: lapic cpu_index=1a, node_id=00, apic_id=36
+SRAT: lapic cpu_index=1b, node_id=00, apic_id=28
+SRAT: lapic cpu_index=1c, node_id=00, apic_id=3a
+SRAT: lapic cpu_index=1d, node_id=00, apic_id=29
+SRAT: lapic cpu_index=1e, node_id=00, apic_id=3e
+SRAT: lapic cpu_index=1f, node_id=01, apic_id=40
+SRAT: lapic cpu_index=20, node_id=01, apic_id=39
+SRAT: lapic cpu_index=21, node_id=01, apic_id=44
+SRAT: lapic cpu_index=22, node_id=01, apic_id=17
+SRAT: lapic cpu_index=23, node_id=01, apic_id=38
+SRAT: lapic cpu_index=24, node_id=01, apic_id=4a
+SRAT: lapic cpu_index=25, node_id=01, apic_id=16
+SRAT: lapic cpu_index=26, node_id=01, apic_id=1b
+SRAT: lapic cpu_index=27, node_id=01, apic_id=1a
+SRAT: lapic cpu_index=28, node_id=01, apic_id=22
+SRAT: lapic cpu_index=29, node_id=01, apic_id=23
+SRAT: lapic cpu_index=2a, node_id=01, apic_id=56
+SRAT: lapic cpu_index=2b, node_id=01, apic_id=58
+SRAT: lapic cpu_index=2c, node_id=01, apic_id=15
+SRAT: lapic cpu_index=2d, node_id=01, apic_id=14
+SRAT: lapic cpu_index=2e, node_id=01, apic_id=5e
+SRAT: lapic cpu_index=2f, node_id=00, apic_id=00
+SRAT: lapic cpu_index=30, node_id=00, apic_id=01
+SRAT: lapic cpu_index=31, node_id=00, apic_id=05
+SRAT: lapic cpu_index=32, node_id=00, apic_id=07
+SRAT: lapic cpu_index=33, node_id=00, apic_id=00
+SRAT: lapic cpu_index=34, node_id=00, apic_id=09
+SRAT: lapic cpu_index=35, node_id=00, apic_id=0d
+SRAT: lapic cpu_index=36, node_id=00, apic_id=0f
+SRAT: lapic cpu_index=37, node_id=00, apic_id=11
+SRAT: lapic cpu_index=38, node_id=00, apic_id=00
+SRAT: lapic cpu_index=39, node_id=00, apic_id=13
+SRAT: lapic cpu_index=3a, node_id=00, apic_id=15
+SRAT: lapic cpu_index=3b, node_id=00, apic_id=17
+SRAT: lapic cpu_index=3c, node_id=00, apic_id=00
+SRAT: lapic cpu_index=3d, node_id=00, apic_id=1d
+SRAT: lapic cpu_index=3e, node_id=00, apic_id=00
+SRAT: lapic cpu_index=3f, node_id=00, apic_id=21
+SRAT: lapic cpu_index=40, node_id=00, apic_id=25
+SRAT: lapic cpu_index=41, node_id=00, apic_id=27
+SRAT: lapic cpu_index=42, node_id=00, apic_id=29
+SRAT: lapic cpu_index=43, node_id=00, apic_id=2f
+SRAT: lapic cpu_index=44, node_id=00, apic_id=31
+SRAT: lapic cpu_index=45, node_id=00, apic_id=00
+SRAT: lapic cpu_index=46, node_id=00, apic_id=33
+SRAT: lapic cpu_index=47, node_id=00, apic_id=00
+SRAT: lapic cpu_index=48, node_id=00, apic_id=35
+SRAT: lapic cpu_index=49, node_id=00, apic_id=00
+SRAT: lapic cpu_index=4a, node_id=00, apic_id=37
+SRAT: lapic cpu_index=4b, node_id=00, apic_id=39
+SRAT: lapic cpu_index=4c, node_id=00, apic_id=3b
+SRAT: lapic cpu_index=4d, node_id=00, apic_id=3d
+SRAT: lapic cpu_index=4e, node_id=00, apic_id=3f
+SRAT: lapic cpu_index=4f, node_id=01, apic_id=41
+SRAT: lapic cpu_index=50, node_id=01, apic_id=43
+SRAT: lapic cpu_index=51, node_id=01, apic_id=45
+SRAT: lapic cpu_index=52, node_id=01, apic_id=47
+SRAT: lapic cpu_index=53, node_id=01, apic_id=49
+SRAT: lapic cpu_index=54, node_id=01, apic_id=4b
+SRAT: lapic cpu_index=55, node_id=01, apic_id=4d
+SRAT: lapic cpu_index=56, node_id=01, apic_id=4f
+SRAT: lapic cpu_index=57, node_id=01, apic_id=51
+SRAT: lapic cpu_index=58, node_id=01, apic_id=53
+SRAT: lapic cpu_index=59, node_id=01, apic_id=55
+SRAT: lapic cpu_index=5a, node_id=01, apic_id=57
+SRAT: lapic cpu_index=5b, node_id=01, apic_id=59
+SRAT: lapic cpu_index=5c, node_id=01, apic_id=5b
+SRAT: lapic cpu_index=5d, node_id=01, apic_id=5d
+SRAT: lapic cpu_index=5e, node_id=01, apic_id=5f
+SRAT: lapic cpu_index=5f, node_id=00, apic_id=00
+memory_map: 0x777f7000
+memory_map 0 addr: 0x0, BaseAddress: 0x0, size: 0x80000000, ElementSize: 0x20, reserved: 0
+memory_map 1 addr: 0x100000000, BaseAddress: 0x40, size: 0xf80000000, ElementSize: 0x3e0, reserved: 0
+adding srat memory 0 entry length: 40, addr: 0x00, length: 0x080000000, proximity_domain: 0, flags: 1
+adding srat memory 1 entry length: 40, addr: 0x10, length: 0xf80000000, proximity_domain: 0, flags: 1
+ACPI: added table 5/32, length now 56
+ACPI:   * SLIT at 7329b260
+ACPI: added table 6/32, length now 60
+ACPI:    * HPET
+ACPI: added table 7/32, length now 64
+ACPI: done.
+ACPI tables: 78544 bytes.
+smbios_write_tables: 73280000
+init_vpd_rdev: No RO_VPD FMAP section.
+init_vpd_rdev: No RW_VPD FMAP section.
+Find version from VPD firmware_version failed
+SMBIOS firmware version is set to coreboot_version: '4.17-574-gbb53f3091c-dirty'
+Create SMBIOS type 16
+Create SMBIOS type 17
+Create SMBIOS type 20
+SMBIOS tables: 839 bytes.
+Writing table forward entry at 0x00000500
+Wrote coreboot table at: 0x00000500, 0x10 bytes, checksum ccb3
+Writing coreboot table at 0x732ac000
+ 0. 0000000000000000-0000000000000fff: CONFIGURATION TABLES
+ 1. 0000000000001000-000000000009ffff: RAM
+ 2. 00000000000a0000-00000000000fffff: RESERVED
+ 3. 0000000000100000-000000007327ffff: RAM
+ 4. 0000000073280000-00000000732f4fff: CONFIGURATION TABLES
+ 5. 00000000732f5000-00000000737cdfff: RAMSTAGE
+ 6. 00000000737ce000-00000000777fffff: CONFIGURATION TABLES
+ 7. 0000000077800000-000000008fffffff: RESERVED
+ 8. 00000000fd000000-00000000fe00ffff: RESERVED
+ 9. 00000000fee00000-00000000fee00fff: RESERVED
+10. 0000000100000000-000000107fffffff: RAM
+SF: Detected 00 0000 with sector size 0x1000, total 0x4000000
+Wrote coreboot table at: 0x732ac000, 0x400 bytes, checksum 2a1a
+coreboot table: 1048 bytes.
+IMD ROOT    0. 0x777ff000 0x00001000
+IMD SMALL   1. 0x777fe000 0x00001000
+FSP MEMORY  2. 0x737ff000 0x03fff000
+CONSOLE     3. 0x737df000 0x00020000
+RO MCACHE   4. 0x737de000 0x0000035c
+TIME STAMP  5. 0x737dd000 0x00000910
+MEM INFO    6. 0x737dc000 0x00000768
+AFTER CAR   7. 0x737ce000 0x0000e000
+RAMSTAGE    8. 0x732f4000 0x004da000
+REFCODE     9. 0x732b4000 0x00040000
+COREBOOT   10. 0x732ac000 0x00008000
+ACPI       11. 0x73288000 0x00024000
+SMBIOS     12. 0x73280000 0x00008000
+IMD small region:
+  IMD ROOT    0. 0x777fec00 0x00000400
+  FSP RUNTIME 1. 0x777febe0 0x00000004
+  FMAP        2. 0x777fea40 0x00000188
+  POWER STATE 3. 0x777fea00 0x00000040
+  ROMSTAGE    4. 0x777fe9e0 0x00000004
+  ROMSTG STCK 5. 0x777fe920 0x000000a8
+  ACPI GNVS   6. 0x777fe8e0 0x00000038
+iio_enable_masks: bus:15 dev:0 func:0
+iio_enable_masks: bus:15 dev:1 func:0
+iio_enable_masks: bus:15 dev:2 func:0
+iio_enable_masks: bus:15 dev:3 func:0
+iio_enable_masks: bus:63 dev:0 func:0
+iio_enable_masks: bus:63 dev:1 func:0
+iio_enable_masks: bus:63 dev:2 func:0
+iio_enable_masks: bus:63 dev:3 func:0
+iio_enable_masks: bus:b2 dev:0 func:0
+iio_enable_masks: bus:b2 dev:1 func:0
+iio_enable_masks: bus:b2 dev:2 func:0
+iio_enable_masks: bus:b2 dev:3 func:0
+BS: BS_WRITE_TABLES run times (exec / console): 3 / 6357 ms
+Finalizing chipset.
+apm_control: Finalizing SMM.
+APMC done.
+BS: BS_PAYLOAD_LOAD entry times (exec / console): 0 / 5 ms
+CBFS: Found 'fallback/payload' @0x286ec0 size 0x8c9a5f in mcache @0x737de26c
+Checking segment from ROM address 0xff5876ec
+Checking segment from ROM address 0xff587708
+Checking segment from ROM address 0xff587724
+Checking segment from ROM address 0xff587740
+Checking segment from ROM address 0xff58775c
+Loading segment from ROM address 0xff5876ec
+  data (compression=0)
+  New segment dstaddr 0x00090000 memsize 0x1080 srcaddr 0xff587778 filesize 0x1080
+Loading Segment: addr: 0x00090000 memsz: 0x0000000000001080 filesz: 0x0000000000001080
+it's not compressed!
+Loading segment from ROM address 0xff587708
+  code (compression=0)
+  New segment dstaddr 0x01000000 memsize 0x53ec00 srcaddr 0xff5887f8 filesize 0x53ec00
+Loading Segment: addr: 0x01000000 memsz: 0x000000000053ec00 filesz: 0x000000000053ec00
+it's not compressed!
+Loading segment from ROM address 0xff587724
+  code (compression=0)
+  New segment dstaddr 0x00040000 memsize 0xef srcaddr 0xffac73f8 filesize 0xef
+Loading Segment: addr: 0x00040000 memsz: 0x00000000000000ef filesz: 0x00000000000000ef
+it's not compressed!
+Loading segment from ROM address 0xff587740
+  data (compression=0)
+  New segment dstaddr 0x04000000 memsize 0x389c64 srcaddr 0xffac74e7 filesize 0x389c64
+Loading Segment: addr: 0x04000000 memsz: 0x0000000000389c64 filesz: 0x0000000000389c64
+it's not compressed!
+Loading segment from ROM address 0xff58775c
+  Entry Point 0x00040000
+BS: BS_PAYLOAD_LOAD run times (exec / console): 6932 / 123 ms
+BS: BS_PAYLOAD_LOAD exit times (exec / console): 84 / 0 ms
+CRITICAL ERROR: AP call expired. 0/95 CPUs accepted.
+mp_park_aps failed after 1004 msecs.
+Jumping to boot code at 0x00040000(0x732ac000)
